@@ -16,4 +16,18 @@
 #ifndef MENU_HPP
 #define MENU_HPP
 
+#include <iostream>
+#include <cstring>
+#include <sstream>
+#include <iomanip>
+using std::cin;
+using std::cout;
+using std::endl;
+
+class Menu {
+public:
+    void validateNumber(int min, int max);
+private:
+};
+
 #endif //PROJECT3_MENU_HPP

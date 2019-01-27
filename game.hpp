@@ -16,13 +16,17 @@
 #ifndef GAME_HPP
 #define GAME_HPP
 
+#include "menu.hpp"
 #include "character.hpp"
 #include <ctime>
 
 class Game {
 public:
+    Game();
     void playGame();
+    void gameFlow();
 private:
+    Menu menu;
 
 };
 
