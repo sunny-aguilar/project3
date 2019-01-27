@@ -1,8 +1,19 @@
-//
-// Created by Sandro on 1/26/2019.
-//
-
-#ifndef PROJECT3_CHARACTER_HPP
-#define PROJECT3_CHARACTER_HPP
+/*********************************************************************
+** Author:          Sandro Aguilar
+** Date:            Feb 2019
+** Description:     PROJECT 3
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+*********************************************************************/
+#ifndef CHARACTER_HPP
+#define CHARACTER_HPP
 
 #endif //PROJECT3_CHARACTER_HPP

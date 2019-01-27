@@ -13,8 +13,7 @@
 **                  d
 **                  d
 *********************************************************************/
-
-#ifndef PROJECT3_GAME_HPP
-#define PROJECT3_GAME_HPP
+#ifndef GAME_HPP
+#define GAME_HPP
 
 #endif //PROJECT3_GAME_HPP

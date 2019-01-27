@@ -1,8 +1,19 @@
-//
-// Created by Sandro on 1/26/2019.
-//
-
-#ifndef PROJECT3_MENU_HPP
-#define PROJECT3_MENU_HPP
+/*********************************************************************
+** Author:          Sandro Aguilar
+** Date:            Feb 2019
+** Description:     PROJECT 3
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+*********************************************************************/
+#ifndef MENU_HPP
+#define MENU_HPP
 
 #endif //PROJECT3_MENU_HPP
