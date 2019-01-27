@@ -44,6 +44,17 @@ void Menu::menuSelectFighter(int player) {
 
 
 /*********************************************************************
+** Description:     g
+*********************************************************************/
+void Menu::menuExitGame() {
+    cout << "\n EXITING GAME - THANKS FOR PLAYING!\n"
+            "+--------------------------------------------------+\n";
+}
+
+
+
+
+/*********************************************************************
 ** Description:     general validator where the parameters are the
 **                  min and max numbers acceptable
 *********************************************************************/

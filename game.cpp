@@ -33,7 +33,7 @@ Game::Game(): fighterType{UNSET} {}
 void Game::playGame() {
     // show main menu
     menu.mainMenu();
-    startGame(menu.validateNumber(1,2));
+    startGame();
 
     // start game
     gameFlow();
@@ -42,11 +42,12 @@ void Game::playGame() {
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void Game::startGame(int sel) {
+void Game::startGame() {
+    int sel = menu.validateNumber(1,2);
     switch (sel) {
         case 1:
             // play game
-            
+            gameFlow();
             break;
         case 2:
             // quit game
@@ -89,4 +90,14 @@ void Game::gameFlow() {
         cout << "Fighter type " << fighterType[player] << " ";
     }
 
+}
+
+
+
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Game::exitGame() {
+    menu.menuExitGame();
 }

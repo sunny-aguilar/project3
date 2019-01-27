@@ -29,6 +29,7 @@ public:
     void mainMenu();
     void menuSelectFighter(int player);
     int validateNumber(int min, int max);
+    void menuExitGame();
 
 private:
 };

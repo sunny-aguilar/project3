@@ -26,8 +26,9 @@ class Game {
 public:
     Game();
     void playGame();
-    void startGame(int sel);
+    void startGame();
     void gameFlow();
+    void exitGame();
 
 private:
     Menu menu;
