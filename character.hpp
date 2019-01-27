@@ -18,6 +18,8 @@
 
 class Character {
 public:
+    Character();
+    Character(int attack, int defense, int armor, int strength);
 
 protected:
     int attack;
