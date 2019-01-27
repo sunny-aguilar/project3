@@ -28,6 +28,10 @@ public:
 
 private:
     Menu menu;
+    int p1CharType;
+    int p2CharType;
+    Character *playerOne;
+    Character *playerTwo;
 
 };
 
