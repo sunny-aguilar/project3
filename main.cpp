@@ -21,6 +21,5 @@ int main() {
     srand(seed);                // create random number generator
     Game game;                  // create game object
     game.playGame();            // play the game
-
     return 0;
 }
