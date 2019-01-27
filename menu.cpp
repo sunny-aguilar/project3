@@ -44,8 +44,31 @@ void Menu::menuSelectFighter(int player) {
     cout << "      Player " << player << " >> ";
 }
 
+/*********************************************************************
+** Description:     g
+*********************************************************************/
+void Menu::menuDisplayPlayers(int type) {
 
-
+    switch (validateNumber(1,5)) {
+        case 1:
+            fighterType[player] = VAMPIRE;
+            break;
+        case 2:
+            fighterType[player] = BARBARIAN;
+            break;
+        case 3:
+            fighterType[player] = BLUEMEN;
+            break;
+        case 4:
+            fighterType[player] = MEDUSA;
+            break;
+        case 5:
+            fighterType[player] = HARRYPOTTER;
+            break;
+        default:
+            cout << "Unable to determine fighter type\n";
+    }
+}
 
 
 /*********************************************************************

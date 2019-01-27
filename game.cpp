@@ -35,8 +35,13 @@ void Game::playGame() {
     menu.mainMenu();
     startGame();
 
-    // start game
-    gameFlow();
+//    if () {
+//
+//    }
+//
+//
+//    // start game
+//    gameFlow();
 }
 
 /*********************************************************************
@@ -62,7 +67,20 @@ void Game::startGame() {
 ** Description:     d
 *********************************************************************/
 void Game::gameFlow() {
-    // initialize fighters chosen to fight
+    // select player
+    selectPlayer();
+
+
+
+}
+
+
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Game::selectPlayer() {
+// initialize fighters chosen to fight
     for (int player: {0,1}) {
         menu.menuSelectFighter(player+1);
         switch (menu.validateNumber(1,5)) {
@@ -86,13 +104,11 @@ void Game::gameFlow() {
         }
     }
 
+    // confirm players with user
     for (int player: {0,1}) {
-        cout << "Fighter type " << fighterType[player] << " ";
+        menu.menuDisplayPlayers(fighterType[player]);
     }
-
 }
-
-
 
 
 /*********************************************************************

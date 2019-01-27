@@ -28,6 +28,7 @@ public:
     void playGame();
     void startGame();
     void gameFlow();
+    void selectPlayer();
     void exitGame();
 
 private:
