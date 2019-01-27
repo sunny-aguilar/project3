@@ -15,8 +15,20 @@
 *********************************************************************/
 #include "menu.hpp"
 
-
-
+/*********************************************************************
+** Description:     g
+*********************************************************************/
+void Menu::mainMenu() {
+    cout << "\n SELECT TO CHARACTERS TO FIGHT\n"
+            "+--------------------------------------------------+\n";
+    cout << "   1. Vampire class\n";
+    cout << "   2. Barbarian class\n";
+    cout << "   3. Blue Men class\n";
+    cout << "   4. Medusa class\n";
+    cout << "   5. Harry Potter class\n";
+    cout << "   6. Exit\n";
+    cout << "   >> ";
+}
 
 
 
