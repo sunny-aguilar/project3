@@ -1,0 +1,8 @@
+//
+// Created by Sandro on 1/26/2019.
+//
+
+#ifndef PROJECT3_CHARACTER_HPP
+#define PROJECT3_CHARACTER_HPP
+
+#endif //PROJECT3_CHARACTER_HPP
