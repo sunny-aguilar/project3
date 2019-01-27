@@ -22,7 +22,7 @@
 class Vampire : public Character {
 public:
     Vampire();
-
+    void attack() override;
 private:
 
 };

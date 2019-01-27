@@ -19,10 +19,11 @@
 class Character {
 public:
     Character();
-    Character(int attack, int defense, int armor, int strength);
+    Character(int attacks, int defense, int armor, int strength);
+    virtual void attack() = 0;
 
 protected:
-    int attack;
+    int attacks;
     int defense;
     int armor;
     int strength;

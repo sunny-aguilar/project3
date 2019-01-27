@@ -20,3 +20,7 @@
 **                  variables
 *********************************************************************/
 Vampire::Vampire() : Character{1,1,1,1} {}
+
+void Vampire::attack() {
+
+}
