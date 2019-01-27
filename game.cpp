@@ -19,7 +19,7 @@
 ** Description:     no-args default constructor that sets the member
 **                  variables
 *********************************************************************/
-Game::Game() {}
+Game::Game(): fighterType{0} {}
 
 /*********************************************************************
 ** Description:     this function is called from main to get the game
@@ -32,14 +32,20 @@ Game::Game() {}
 *********************************************************************/
 void Game::playGame() {
 
+    gameFlow();
 }
 
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
 void Game::gameFlow() {
-    menu.mainMenu();
+    for (int player: {0,1}) {
+        menu.mainMenu();
+        fighterType[player] = menu.validateNumber(1,5);
+    }
 
-
+    for (int player: {0,1}) {
+        cout << "Fighter type " << fighterType[player] << " ";
+    }
 
 }

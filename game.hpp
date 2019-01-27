@@ -28,8 +28,7 @@ public:
 
 private:
     Menu menu;
-    int p1CharType;
-    int p2CharType;
+    int fighterType[2];
     Character *playerOne;
     Character *playerTwo;
 
