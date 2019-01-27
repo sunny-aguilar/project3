@@ -39,6 +39,7 @@ void Game::playGame() {
 ** Description:     d
 *********************************************************************/
 void Game::gameFlow() {
+    // initialize fighters chosen to fight
     for (int player: {0,1}) {
         menu.mainMenu();
         fighterType[player] = menu.validateNumber(1,5);
