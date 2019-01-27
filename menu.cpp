@@ -19,7 +19,7 @@
 ** Description:     g
 *********************************************************************/
 void Menu::mainMenu() {
-    cout << "\n SELECT TO CHARACTERS TO FIGHT\n"
+    cout << "\n SELECT TWO CHARACTERS TO FIGHT\n"
             "+--------------------------------------------------+\n";
     cout << "   1. Vampire class\n";
     cout << "   2. Barbarian class\n";
