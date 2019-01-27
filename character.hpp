@@ -16,4 +16,16 @@
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 
+class Character {
+public:
+
+protected:
+    int attack;
+    int defense;
+    int armor;
+    int strength;
+private:
+
+};
+
 #endif //PROJECT3_CHARACTER_HPP

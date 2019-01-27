@@ -25,6 +25,7 @@ public:
     Game();
     void playGame();
     void gameFlow();
+
 private:
     Menu menu;
 

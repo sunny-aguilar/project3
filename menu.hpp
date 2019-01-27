@@ -27,6 +27,7 @@ using std::endl;
 class Menu {
 public:
     void validateNumber(int min, int max);
+
 private:
 };
 
