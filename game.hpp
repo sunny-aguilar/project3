@@ -16,4 +16,14 @@
 #ifndef GAME_HPP
 #define GAME_HPP
 
+#include "character.hpp"
+#include <ctime>
+
+class Game {
+public:
+    void playGame();
+private:
+
+};
+
 #endif //PROJECT3_GAME_HPP
