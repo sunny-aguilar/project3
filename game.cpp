@@ -51,7 +51,7 @@ void Game::startGame() {
             break;
         case 2:
             // quit game
-
+            exitGame();
             break;
         default:
             cout << "Unable to determine your selection!\n";
