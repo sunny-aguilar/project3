@@ -43,8 +43,17 @@ void Game::playGame() {
 ** Description:     d
 *********************************************************************/
 void Game::startGame(int sel) {
-    switch () {
-        
+    switch (sel) {
+        case 1:
+            // play game
+            
+            break;
+        case 2:
+            // quit game
+
+            break;
+        default:
+            cout << "Unable to determine your selection!\n";
     }
 }
 
