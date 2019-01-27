@@ -20,15 +20,18 @@
 #include "character.hpp"
 #include <ctime>
 
+enum Fighter {UNSET, VAMPIRE, BARBARIAN, BLUEMEN, MEDUSA, HARRYPOTTER};
+
 class Game {
 public:
     Game();
     void playGame();
+    void startGame(int sel);
     void gameFlow();
 
 private:
     Menu menu;
-    int fighterType[2];
+    Fighter fighterType[2];
     Character *playerOne;
     Character *playerTwo;
 

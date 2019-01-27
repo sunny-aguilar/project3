@@ -21,13 +21,22 @@
 void Menu::mainMenu() {
     cout << "\n SELECT TWO CHARACTERS TO FIGHT\n"
             "+--------------------------------------------------+\n";
+    cout << "   1. Start Game\n";
+    cout << "   2. Exit\n";
+}
+
+/*********************************************************************
+** Description:     g
+*********************************************************************/
+void Menu::menuSelectFighter(int player) {
+    cout << "\n SELECT TWO CHARACTERS TO FIGHT\n"
+            "+--------------------------------------------------+\n";
     cout << "   1. Vampire class\n";
     cout << "   2. Barbarian class\n";
     cout << "   3. Blue Men class\n";
     cout << "   4. Medusa class\n";
     cout << "   5. Harry Potter class\n";
-    cout << "   6. Exit\n";
-    cout << "   >> ";
+    cout << "      Player " << player << " >> ";
 }
 
 

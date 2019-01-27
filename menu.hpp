@@ -27,6 +27,7 @@ using std::endl;
 class Menu {
 public:
     void mainMenu();
+    void menuSelectFighter(int player);
     int validateNumber(int min, int max);
 
 private:
