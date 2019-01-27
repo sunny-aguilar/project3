@@ -1,6 +1,18 @@
-//
-// Created by Sandro on 1/26/2019.
-//
+/*********************************************************************
+** Author:          Sandro Aguilar
+** Date:            Feb 2019
+** Description:     PROJECT 3
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+*********************************************************************/
 
 #ifndef PROJECT3_GAME_HPP
 #define PROJECT3_GAME_HPP
