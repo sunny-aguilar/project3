@@ -26,8 +26,9 @@ class Vampire : public Character {
 public:
     Vampire();
     ~Vampire() override;
-    void attack() override;
     void initializeDice() override;
+    void attack() override;
+    void defend() override;
     void rollDice() override;
 
 private:

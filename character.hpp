@@ -25,6 +25,7 @@ public:
     virtual ~Character();
     virtual void initializeDice() = 0;
     virtual void attack() = 0;
+    virtual void defend() = 0;
     virtual void rollDice() = 0;
 
 protected:

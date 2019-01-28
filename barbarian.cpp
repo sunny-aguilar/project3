@@ -59,3 +59,10 @@ void Barbarian::rollDice() {
 void Barbarian::attack() {
     cout << "Barbarian attacks!" << endl;
 }
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Barbarian::defend() {
+
+}

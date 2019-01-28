@@ -59,3 +59,10 @@ void Vampire::rollDice() {
 void Vampire::attack() {
     cout << "Vampire attacks!" << endl;
 }
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Character::defend() {
+
+}
