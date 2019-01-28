@@ -71,9 +71,9 @@ void Vampire::attackPlayer(Character *defender) {
 
     // roll dice
     attackVal = rollDice("attack");
-    attackValue = attackVal;
+    attackReceived = attackVal;
     cout << "Attack value " << attackVal << endl << endl;
-    defender->setAttackVal(attackValue);
+    defender->setAttackVal(attackReceived);
 }
 
 /*********************************************************************
@@ -86,13 +86,15 @@ void Vampire::defend() {
     // roll dice
     defendValue = rollDice("defend");
 
-    int damage = attackValue - defendValue - armor;
+    int damage = attackReceived - defendValue - armor;
     if (damage < 0) { damage = 0; }
-    cout << "Damage Calc: Attack " << attackValue << " - Defense " << defendValue << " - armor " << armor << endl;
+    cout << "Damage Calc: Attack " << attackReceived << " - Defense " << defendValue << " - armor " << armor << endl;
     cout << "Damage sustained " << damage << endl;
 }
 
-
+/*********************************************************************
+** Description:     sets the attack damage received
+*********************************************************************/
 void Vampire::setAttackVal(int val) {
-    attackValue = val;
+    attackReceived = val;
 }

@@ -34,7 +34,7 @@ protected:
     int defense;
     int armor;
     int strength;
-    int attackValue;
+    int attackReceived;
     int damageInflicted;
     Dice **attackDice;
     Dice **defenseDice;

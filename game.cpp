@@ -147,7 +147,7 @@ void Game::startCombat() {
         // second player attacks
         playerTwo->attackPlayer(playerOne);
         playerOne->defend();
-        
+
 
 //    } while ();
 }
