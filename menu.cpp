@@ -52,8 +52,8 @@ void Menu::menuDisplayPlayers(int first, int second) {
     string fighterArray[] = {"Vampire", "Barbarian", "Blue Men",
                              "Medusa", "Harry Potter"};
 
-    cout << "Fighter One - " << fighterArray[first - 1] << endl;
-    cout << "Fighter Two - " << fighterArray[second - 1] << endl;
+    cout << "First Combatant - " << fighterArray[first - 1] << endl;
+    cout << "Second Combatant - " << fighterArray[second - 1] << endl;
 }
 
 
@@ -64,9 +64,6 @@ void Menu::menuExitGame() {
     cout << "\n EXITING GAME - THANKS FOR PLAYING!\n"
             "+--------------------------------------------------+\n";
 }
-
-
-
 
 /*********************************************************************
 ** Description:     general validator where the parameters are the
