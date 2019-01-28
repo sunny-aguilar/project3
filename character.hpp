@@ -22,6 +22,7 @@ public:
     Character(int attacks, int defense, int armor, int strength);
     virtual ~Character();
     virtual void attack() = 0;
+    virtual int dice() = 0;
 
 protected:
     int attacks;

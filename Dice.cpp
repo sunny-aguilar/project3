@@ -13,30 +13,40 @@
 **                  d
 **                  d
 *********************************************************************/
-#include "barbarian.hpp"
+#include "Dice.hpp"
 
 /*********************************************************************
-** Description:     no-args default constructor that sets the member
-**                  variables
+** Description:     no-args default constructor that sets the number
+**                  of sides on the die
 *********************************************************************/
-Barbarian::Barbarian() : Character{1,1,0,12} {}
+Die::Die() : N{0} {}
 
 /*********************************************************************
-** Description:     virtual destructor
+** Description:     1-arg constructor that takes an int parameter to
+**                  set the number of sides on the die
 *********************************************************************/
-Barbarian::~Barbarian() {}
+Die::Die(int num) : N{num} {}
 
 /*********************************************************************
-** Description:     polymorphic function for attacking. Attack value
-**                  is 2d6.
+** Description:     returns a random integer from 1 to N
 *********************************************************************/
-void Barbarian::attack() {
-    cout << "Barbarian attacks!" << endl;
+int Die::randomInt() {
+    int randomNum;              // hold random number
+    randomNum = rand() % N + 1; // computer random # from 1 to N
+    return randomNum;           // return random integer
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     setter that takes an int parameter to set the
+**                  sides of N
 *********************************************************************/
-int Barbarian::dice() {
+void Die::setSides(int sides) {
+    N = sides;
+}
 
+/*********************************************************************
+** Description:     getter that returns N
+*********************************************************************/
+int Die::getSides() {
+    return N;
 }

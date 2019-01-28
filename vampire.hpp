@@ -28,6 +28,7 @@ public:
     Vampire();
     ~Vampire() override;
     void attack() override;
+    int dice() override;
 
 private:
 

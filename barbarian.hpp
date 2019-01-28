@@ -27,6 +27,7 @@ public:
     Barbarian();
     ~Barbarian() override;
     void attack() override;
+    int dice() override;
 
 private:
 
