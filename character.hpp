@@ -28,7 +28,7 @@ public:
     virtual void attackPlayer(Character *defender) = 0;
     virtual void setAttackVal(int val) = 0;
     virtual void defend() = 0;
-    virtual void strengthUpdate(int damage) = 0;
+    virtual void strengthUpdate() = 0;
 
 protected:
     int attack;
@@ -36,7 +36,7 @@ protected:
     int armor;
     int strength;
     int attackReceived;
-    int damageInflicted;
+    int damageReceived;
     Dice **attackDice;
     Dice **defenseDice;
 

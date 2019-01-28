@@ -104,14 +104,15 @@ void Barbarian::defend() {
          << armor << endl;
 
     // update player strength
-    strengthUpdate(damage);
+    damageReceived = damage;
+    strengthUpdate();
 }
 
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void Barbarian::strengthUpdate(int damage) {
-    cout << "Damage sustained " << damage << endl;
-    strength -= damage;
+void Barbarian::strengthUpdate() {
+    cout << "Damage sustained " << damageReceived << endl;
+    strength -= damageReceived;
     cout << "Strength remaining " << strength << endl;
 }
