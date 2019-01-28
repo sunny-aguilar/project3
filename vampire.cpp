@@ -35,7 +35,12 @@ Vampire::~Vampire() {}
 ** Description:     d
 *********************************************************************/
 void Vampire::initializeDice() {
+    attackDice[1] = new Dice[1];
+    defenseDice[1] = new Dice[1];
 
+    for (int index = 0; index < 1; index++) {
+
+    }
 }
 
 void Vampire::rollDice() {

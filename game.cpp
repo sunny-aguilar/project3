@@ -64,7 +64,7 @@ void Game::gameFlow() {
     selectPlayer();
 
     // create combatant dice
-    playerOne->
+    playerOne->initializeDice();
 
     // start combat
     startCombat();
