@@ -22,7 +22,7 @@ void Menu::mainMenu() {
     cout << "+---------------------------------------------------------+\n"
             "|                     /                                   |\n"
             "|            *//////{<>==================-                |\n"
-            "|                    \\    WIZARD WARS                     |\n"
+            "|                     \\    WIZARD WARS                    |\n"
             "|                                                         |\n"
             "+---------------------------------------------------------+\n";
     cout << " 1. Start Game\n";
@@ -51,7 +51,7 @@ void Menu::menuDisplayPlayers(int first, int second) {
     string fighterArray[] = {"Vampire", "Barbarian", "Blue Men",
                              "Medusa", "Harry Potter"};
 
-    cout << "First Combatant - " << fighterArray[first - 1] << endl;
+    cout << "\nFirst Combatant - " << fighterArray[first - 1] << endl;
     cout << "Second Combatant - " << fighterArray[second - 1] << endl;
 }
 
