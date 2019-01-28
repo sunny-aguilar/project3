@@ -28,8 +28,9 @@ public:
     ~Barbarian() override;
     void initializeDice() override;
     void attackPlayer(Character *defender) override;
-    void defend(int attackVal) override;
+    void defend() override;
     int rollDice(std::string action) override;
+    void setAttackVal(int val) override;
 
 private:
 

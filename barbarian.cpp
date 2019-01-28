@@ -74,17 +74,18 @@ void Barbarian::attackPlayer(Character *defender) {
 
     // roll dice
     attackVal = rollDice("attack");
-    cout << "Attack value " << attackVal << endl << endl;
     attackValue = attackVal;
     cout << "Attack value " << attackVal << endl << endl;
+    defender->setAttackVal(attackValue);
 }
 
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void Barbarian::defend(int attackVal) {
+void Barbarian::defend() {
     cout << "Barbarian defends!" << endl;
     int defendValue = 0;
+    cout << "Attack received " << attackValue << endl;
 
     // roll dice
     defendValue = rollDice("defend");
@@ -94,4 +95,9 @@ void Barbarian::defend(int attackVal) {
     if (damage < 0) { damage = 0; }
     cout << "Damage Calc: Attack " << attackValue << " - Defense " << defendValue << " - armor " << armor << endl;
     cout << "Damage sustained " << damage << endl << endl;
+}
+
+
+void Barbarian::setAttackVal(int val) {
+    attackValue = val;
 }
