@@ -45,7 +45,7 @@ void Barbarian::initializeDice() {
     }
 }
 
-int Barbarian::rollDice() {
+int Barbarian::rollDice(std::string action) {
     cout << "Barbarian Attack Dice One " << attackDice[0][0].randomInt() << endl;
     cout << "Barbarian Attack Dice Two " << attackDice[0][1].randomInt() << endl;
     cout << "Barbarian Defense Dice One " << defenseDice[0][0].randomInt() << endl;
@@ -56,7 +56,7 @@ int Barbarian::rollDice() {
 ** Description:     polymorphic function for attacking. Attack value
 **                  is 2d6.
 *********************************************************************/
-void Barbarian::attack() {
+void Barbarian::attack(Character *defender) {
     cout << "Barbarian attacks!" << endl;
     int attackValue = 0;
 }
