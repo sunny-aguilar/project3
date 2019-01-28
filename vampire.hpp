@@ -27,9 +27,9 @@ public:
     Vampire();
     ~Vampire() override;
     void initializeDice() override;
+    int rollDice(std::string action) override;
     void attackPlayer(Character *defender) override;
     void defend() override;
-    int rollDice(std::string action) override;
     void setAttackVal(int val) override;
 
 private:

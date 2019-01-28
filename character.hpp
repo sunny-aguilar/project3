@@ -24,9 +24,9 @@ public:
     Character(int attack, int defense, int armor, int strength);
     virtual ~Character();
     virtual void initializeDice() = 0;
+    virtual int rollDice(std::string action) = 0;
     virtual void attackPlayer(Character *defender) = 0;
     virtual void defend() = 0;
-    virtual int rollDice(std::string action) = 0;
     virtual void setAttackVal(int val) = 0;
 
 protected:
