@@ -71,7 +71,7 @@ void Vampire::attackPlayer(Character *defender) {
 
     // roll dice
     attackVal = rollDice("attack");
-    cout << "Attack value " << attackVal << endl;
+    cout << "Attack value " << attackVal << endl << endl;
     attackValue = attackVal;
 }
 
@@ -84,7 +84,9 @@ void Vampire::defend() {
 
     // roll dice
     defendValue = rollDice("defend");
+    cout << "Damage blocked " << defendValue << endl << endl;
 
     int damage = attackValue - defendValue - armor;
+    if (damage < 0) { damage = 0; }
     cout << "Damage sustained " << damage << endl;
 }
