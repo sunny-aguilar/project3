@@ -35,21 +35,21 @@ Vampire::~Vampire() {}
 ** Description:     d
 *********************************************************************/
 void Vampire::initializeDice() {
-    attackDice[1] = new Dice[1];
-    defenseDice[1] = new Dice[1];
+    attackDice[0] = new Dice[1];
+    defenseDice[0] = new Dice[1];
 
-    for (int index = 0; index < 1; index++) {
-        attackDice[0][index] = Dice(12);
-    }
-
-    for (int index = 0; index < 1; index++) {
-        defenseDice[0][index] = Dice(6);
-    }
+//    for (int index = 0; index < 1; index++) {
+        attackDice[0][0] = Dice(12);
+//    }
+//
+//    for (int index = 0; index < 1; index++) {
+//        defenseDice[0][index] = Dice(6);
+//    }
 }
 
 void Vampire::rollDice() {
-    cout << "Vampire Random Int " << attackDice[0][0].randomInt() << endl;
-    cout << "Vampire Random Int " << defenseDice[0][0].randomInt() << endl;
+//    cout << "Vampire Attack Dice One " << attackDice[0][0].randomInt() << endl;
+//    cout << "Vampire Defense Dice One " << defenseDice[0][0].randomInt() << endl;
 }
 
 /*********************************************************************
