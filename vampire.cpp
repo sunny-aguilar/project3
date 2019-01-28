@@ -82,11 +82,9 @@ void Vampire::attackPlayer(Character *defender) {
 void Vampire::defend() {
     cout << "Vampire defends!" << endl;
     int defendValue = 0;
-    cout << "Attack received " << attackValue << endl;
 
     // roll dice
     defendValue = rollDice("defend");
-    cout << "Damage blocked " << defendValue << endl;
 
     int damage = attackValue - defendValue - armor;
     if (damage < 0) { damage = 0; }

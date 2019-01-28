@@ -29,7 +29,8 @@ Character::Character(int attack, int defense, int armor, int strength) :
     defense{defense},
     armor{armor},
     strength{strength},
-    attackValue{0} {
+    attackValue{0},
+    damageInflicted{0} {
 }
 
 /*********************************************************************
