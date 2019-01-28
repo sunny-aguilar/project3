@@ -52,7 +52,7 @@ void Menu::menuDisplayPlayers(int first, int second) {
                              "Medusa", "Harry Potter"};
 
     cout << "\nFirst Combatant - " << fighterArray[first - 1] << endl;
-    cout << "Second Combatant - " << fighterArray[second - 1] << endl;
+    cout << "Second Combatant - " << fighterArray[second - 1] << endl << endl;
 }
 
 
