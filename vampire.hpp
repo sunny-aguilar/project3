@@ -29,8 +29,8 @@ public:
     void initializeDice() override;
     int rollDice(std::string action) override;
     void attackPlayer(Character *defender) override;
-    void defend() override;
     void setAttackVal(int val) override;
+    void defend() override;
 
 private:
 
