@@ -111,5 +111,5 @@ void Vampire::defend() {
 void Vampire::strengthUpdate() {
     cout << "Damage sustained " << damageReceived << endl;
     strength -= damageReceived;
-    cout << "Strength remaining " << strength << endl;
+    cout << "Strength remaining " << strength << endl << endl;
 }
