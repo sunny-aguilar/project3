@@ -47,11 +47,6 @@ void Barbarian::initializeDice() {
 }
 
 int Barbarian::rollDice(std::string action) {
-//    cout << "Barbarian Attack Dice One " << attackDice[0][0].randomInt() << endl;
-//    cout << "Barbarian Attack Dice Two " << attackDice[0][1].randomInt() << endl;
-//    cout << "Barbarian Defense Dice One " << defenseDice[0][0].randomInt() << endl;
-//    cout << "Barbarian Defense Dice One " << defenseDice[0][1].randomInt() << endl;
-
     int totalRolled = 0;
     if (action == "attack") {
         totalRolled += attackDice[0][0].randomInt();
@@ -75,7 +70,7 @@ void Barbarian::attackPlayer(Character *defender) {
     // roll dice
     attackVal = rollDice("attack");
     attackReceived = attackVal;
-    cout << "Attack value " << attackVal << endl;
+    cout << "Attack value " << attackVal << endl << endl;
     defender->setAttackVal(attackReceived);
 }
 
@@ -105,7 +100,7 @@ void Barbarian::defend() {
 
     // update player strength
     damageReceived = damage;
-    strengthUpdate();
+//    strengthUpdate();
 }
 
 /*********************************************************************
@@ -114,5 +109,5 @@ void Barbarian::defend() {
 void Barbarian::strengthUpdate() {
     cout << "Damage sustained " << damageReceived << endl;
     strength -= damageReceived;
-    cout << "Strength remaining " << strength << endl;
+    cout << "Strength remaining " << strength << endl << endl;
 }
