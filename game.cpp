@@ -19,7 +19,7 @@
 ** Description:     no-args default constructor that sets the member
 **                  variables
 *********************************************************************/
-Game::Game(): fighterType{UNSET} {}
+Game::Game(): fighterType{UNSET}, rounds{0} {}
 
 /*********************************************************************
 ** Description:     this function is called from main to get the game
