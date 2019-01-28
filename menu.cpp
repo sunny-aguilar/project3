@@ -16,14 +16,13 @@
 #include "menu.hpp"
 
 /*********************************************************************
-** Description:     g
+** Description:     displays the main menu
 *********************************************************************/
 void Menu::mainMenu() {
     cout << "+---------------------------------------------------------+\n"
-            "|                                                         |\n"
-            "|                                                         |\n"
-            "|                WELCOME TO WIZARD WARS                   |\n"
-            "|                                                         |\n"
+            "|                     /                                   |\n"
+            "|            *//////{<>==================-                |\n"
+            "|                    \\    WIZARD WARS                     |\n"
             "|                                                         |\n"
             "+---------------------------------------------------------+\n";
     cout << " 1. Start Game\n";
@@ -32,7 +31,7 @@ void Menu::mainMenu() {
 }
 
 /*********************************************************************
-** Description:     g
+** Description:     displays the menu of characters to choose from
 *********************************************************************/
 void Menu::menuSelectFighter(int player) {
     cout << "\n SELECT TWO CHARACTERS TO FIGHT\n"
@@ -46,7 +45,7 @@ void Menu::menuSelectFighter(int player) {
 }
 
 /*********************************************************************
-** Description:     g
+** Description:     displays characters chosen for battle
 *********************************************************************/
 void Menu::menuDisplayPlayers(int first, int second) {
     string fighterArray[] = {"Vampire", "Barbarian", "Blue Men",
