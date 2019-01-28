@@ -75,6 +75,7 @@ void Barbarian::attackPlayer(Character *defender) {
     // roll dice
     attackVal = rollDice("attack");
     cout << "Attack value " << attackVal << endl;
+    attackValue = attackVal;
 }
 
 /*********************************************************************
@@ -87,4 +88,6 @@ void Barbarian::defend() {
     // roll dice
     defendValue = rollDice("defend");
 
+    int damage = attackValue - defendValue - armor;
+    cout << "Damage sustained " << damage << endl;
 }
