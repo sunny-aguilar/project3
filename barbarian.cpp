@@ -50,6 +50,8 @@ int Barbarian::rollDice(std::string action) {
     cout << "Barbarian Attack Dice Two " << attackDice[0][1].randomInt() << endl;
     cout << "Barbarian Defense Dice One " << defenseDice[0][0].randomInt() << endl;
     cout << "Barbarian Defense Dice One " << defenseDice[0][1].randomInt() << endl;
+
+    return 0;
 }
 
 /*********************************************************************
