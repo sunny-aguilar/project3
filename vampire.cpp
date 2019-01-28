@@ -48,8 +48,8 @@ void Vampire::initializeDice() {
 }
 
 void Vampire::rollDice() {
-//    cout << "Vampire Attack Dice One " << attackDice[0][0].randomInt() << endl;
-//    cout << "Vampire Defense Dice One " << defenseDice[0][0].randomInt() << endl;
+    cout << "Vampire Attack Dice One " << attackDice[0][0].randomInt() << endl;
+    cout << "Vampire Defense Dice One " << defenseDice[0][0].randomInt() << endl;
 }
 
 /*********************************************************************
