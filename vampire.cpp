@@ -56,8 +56,11 @@ void Vampire::rollDice() {
 ** Description:     polymorphic function for attacking. Attack value
 **                  is 1d12.
 *********************************************************************/
-void Vampire::attack() {
+void Vampire::attack(Character *defender) {
     cout << "Vampire attacks!" << endl;
+    int attackValue = 0;
+
+
 
 }
 

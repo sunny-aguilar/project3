@@ -58,7 +58,7 @@ void Barbarian::rollDice() {
 *********************************************************************/
 void Barbarian::attack() {
     cout << "Barbarian attacks!" << endl;
-    
+    int attackValue = 0;
 }
 
 /*********************************************************************

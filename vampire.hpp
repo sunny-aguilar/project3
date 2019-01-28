@@ -27,7 +27,7 @@ public:
     Vampire();
     ~Vampire() override;
     void initializeDice() override;
-    void attack() override;
+    void attack(Character *defender) override;
     void defend() override;
     void rollDice() override;
 
