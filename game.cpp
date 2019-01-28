@@ -142,12 +142,12 @@ void Game::startCombat() {
         // first player attacks
         playerOne->attackPlayer(playerTwo);
         playerTwo->defend();
-
+        playerTwo->strengthUpdate();
 
         // second player attacks
         playerTwo->attackPlayer(playerOne);
         playerOne->defend();
-
+        playerOne->strengthUpdate();
 
 //    } while ();
 }
