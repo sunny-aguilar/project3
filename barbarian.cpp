@@ -46,10 +46,10 @@ void Barbarian::initializeDice() {
 }
 
 int Barbarian::rollDice(std::string action) {
-    cout << "Barbarian Attack Dice One " << attackDice[0][0].randomInt() << endl;
-    cout << "Barbarian Attack Dice Two " << attackDice[0][1].randomInt() << endl;
-    cout << "Barbarian Defense Dice One " << defenseDice[0][0].randomInt() << endl;
-    cout << "Barbarian Defense Dice One " << defenseDice[0][1].randomInt() << endl;
+//    cout << "Barbarian Attack Dice One " << attackDice[0][0].randomInt() << endl;
+//    cout << "Barbarian Attack Dice Two " << attackDice[0][1].randomInt() << endl;
+//    cout << "Barbarian Defense Dice One " << defenseDice[0][0].randomInt() << endl;
+//    cout << "Barbarian Defense Dice One " << defenseDice[0][1].randomInt() << endl;
 
     int totalRolled = 0;
     if (action == "attack") {
@@ -73,7 +73,7 @@ void Barbarian::attack(Character *defender) {
 
     // roll dice
     attackValue = rollDice("attack");
-    cout << "Attack value" << attackValue << endl;
+    cout << "Attack value " << attackValue << endl;
 }
 
 /*********************************************************************

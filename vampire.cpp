@@ -48,8 +48,8 @@ void Vampire::initializeDice() {
 }
 
 int Vampire::rollDice(std::string action) {
-    cout << "Vampire Attack Dice " << attackDice[0][0].randomInt() << endl;
-    cout << "Vampire Defense Dice " << defenseDice[0][0].randomInt() << endl;
+//    cout << "Vampire Attack Dice " << attackDice[0][0].randomInt() << endl;
+//    cout << "Vampire Defense Dice " << defenseDice[0][0].randomInt() << endl;
 
     int totalRolled = 0;
     if (action == "attack") {
@@ -71,7 +71,7 @@ void Vampire::attack(Character *defender) {
 
     // roll dice
     attackValue = rollDice("attack");
-    cout << "Attack value" << attackValue << endl;
+    cout << "Attack value " << attackValue << endl;
 }
 
 /*********************************************************************
