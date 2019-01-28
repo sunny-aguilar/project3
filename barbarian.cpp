@@ -51,7 +51,16 @@ int Barbarian::rollDice(std::string action) {
     cout << "Barbarian Defense Dice One " << defenseDice[0][0].randomInt() << endl;
     cout << "Barbarian Defense Dice One " << defenseDice[0][1].randomInt() << endl;
 
-    return 0;
+    int totalRolled = 0;
+    if (action == "attack") {
+        totalRolled += attackDice[0][0].randomInt();
+        totalRolled += attackDice[0][1].randomInt();
+    }
+    else if (action == "defend") {
+        totalRolled += defenseDice[0][0].randomInt();
+        totalRolled += defenseDice[0][1].randomInt();
+    }
+    return totalRolled;
 }
 
 /*********************************************************************
@@ -61,6 +70,9 @@ int Barbarian::rollDice(std::string action) {
 void Barbarian::attack(Character *defender) {
     cout << "Barbarian attacks!" << endl;
     int attackValue = 0;
+
+    // roll dice
+    attackValue = rollDice("attack");
 }
 
 /*********************************************************************
