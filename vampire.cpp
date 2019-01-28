@@ -77,6 +77,13 @@ void Vampire::attackPlayer(Character *defender) {
 }
 
 /*********************************************************************
+** Description:     sets the attack damage received
+*********************************************************************/
+void Vampire::setAttackVal(int val) {
+    attackReceived = val;
+}
+
+/*********************************************************************
 ** Description:     d
 *********************************************************************/
 void Vampire::defend() {
@@ -95,8 +102,8 @@ void Vampire::defend() {
 }
 
 /*********************************************************************
-** Description:     sets the attack damage received
+** Description:     d
 *********************************************************************/
-void Vampire::setAttackVal(int val) {
-    attackReceived = val;
+void Vampire::strengthUpdate() {
+
 }
