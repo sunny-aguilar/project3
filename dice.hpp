@@ -21,10 +21,10 @@
 #include <vector>
 using std::vector;
 
-class Die {
+class Dice {
 public:
-    Die();                          // default constructor
-    Die(int num);                   // 1-arg constructor
+    Dice();                          // default constructor
+    Dice(int num);                   // 1-arg constructor
     int randomInt();                // returns a random integer
     void setSides(int sides);       // setter that sets die sides
     int getSides();                 // getter that returns die sides

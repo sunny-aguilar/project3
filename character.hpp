@@ -16,19 +16,23 @@
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 
+#include "dice.hpp"
+
 class Character {
 public:
     Character();
     Character(int attacks, int defense, int armor, int strength);
     virtual ~Character();
     virtual void attack() = 0;
-    virtual int dice() = 0;
 
 protected:
     int attacks;
     int defense;
     int armor;
     int strength;
+    Dice attackDice;
+    Dice defenseDice;
+
 
 private:
 

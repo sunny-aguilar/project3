@@ -13,7 +13,6 @@
 **                  d
 **                  d
 *********************************************************************/
-
 #ifndef VAMPIRE_HPP
 #define VAMPIRE_HPP
 
@@ -28,7 +27,7 @@ public:
     Vampire();
     ~Vampire() override;
     void attack() override;
-    int dice() override;
+
 
 private:
 

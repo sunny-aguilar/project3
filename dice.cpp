@@ -13,24 +13,24 @@
 **                  d
 **                  d
 *********************************************************************/
-#include "Dice.hpp"
+#include "dice.hpp"
 
 /*********************************************************************
 ** Description:     no-args default constructor that sets the number
 **                  of sides on the die
 *********************************************************************/
-Die::Die() : N{0} {}
+Dice::Dice() : N{0} {}
 
 /*********************************************************************
 ** Description:     1-arg constructor that takes an int parameter to
 **                  set the number of sides on the die
 *********************************************************************/
-Die::Die(int num) : N{num} {}
+Dice::Dice(int num) : N{num} {}
 
 /*********************************************************************
 ** Description:     returns a random integer from 1 to N
 *********************************************************************/
-int Die::randomInt() {
+int Dice::randomInt() {
     int randomNum;              // hold random number
     randomNum = rand() % N + 1; // computer random # from 1 to N
     return randomNum;           // return random integer
@@ -40,13 +40,13 @@ int Die::randomInt() {
 ** Description:     setter that takes an int parameter to set the
 **                  sides of N
 *********************************************************************/
-void Die::setSides(int sides) {
+void Dice::setSides(int sides) {
     N = sides;
 }
 
 /*********************************************************************
 ** Description:     getter that returns N
 *********************************************************************/
-int Die::getSides() {
+int Dice::getSides() {
     return N;
 }
