@@ -38,8 +38,8 @@ void Barbarian::initializeDice() {
 }
 
 void Barbarian::rollDice() {
-//    cout << "Barbarian Random Int " << attackDice->randomInt() << endl;
-//    cout << "Barbarian Random Int " << defenseDice->randomInt() << endl;
+    cout << "Barbarian Random Int " << attackDice->randomInt() << endl;
+    cout << "Barbarian Random Int " << defenseDice->randomInt() << endl;
 }
 
 /*********************************************************************
