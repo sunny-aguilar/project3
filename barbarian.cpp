@@ -45,7 +45,7 @@ void Barbarian::initializeDice() {
     }
 }
 
-void Barbarian::rollDice() {
+int Barbarian::rollDice() {
     cout << "Barbarian Attack Dice One " << attackDice[0][0].randomInt() << endl;
     cout << "Barbarian Attack Dice Two " << attackDice[0][1].randomInt() << endl;
     cout << "Barbarian Defense Dice One " << defenseDice[0][0].randomInt() << endl;

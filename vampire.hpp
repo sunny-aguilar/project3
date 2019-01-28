@@ -29,7 +29,7 @@ public:
     void initializeDice() override;
     void attack(Character *defender) override;
     void defend() override;
-    void rollDice() override;
+    int rollDice(std::string action) override;
 
 private:
 

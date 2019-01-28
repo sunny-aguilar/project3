@@ -26,7 +26,7 @@ public:
     virtual void initializeDice() = 0;
     virtual void attack(Character *defender) = 0;
     virtual void defend() = 0;
-    virtual void rollDice() = 0;
+    virtual int rollDice(std::string action) = 0;
 
 protected:
     int attacks;

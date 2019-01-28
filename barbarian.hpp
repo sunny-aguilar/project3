@@ -29,7 +29,7 @@ public:
     void initializeDice() override;
     void attack() override;
     void defend() override;
-    void rollDice() override;
+    int rollDice() override;
 
 private:
 
