@@ -26,8 +26,9 @@ void Menu::mainMenu() {
             "|                                                         |\n"
             "|                                                         |\n"
             "+---------------------------------------------------------+\n";
-    cout << "                   1. Start Game\n";
-    cout << "                   2. Exit\n";
+    cout << " 1. Start Game\n";
+    cout << " 2. Exit\n";
+    cout << " >> ";
 }
 
 /*********************************************************************
@@ -41,33 +42,18 @@ void Menu::menuSelectFighter(int player) {
     cout << "   3. Blue Men class\n";
     cout << "   4. Medusa class\n";
     cout << "   5. Harry Potter class\n";
-    cout << "      Player " << player << " >> ";
+    cout << "   Player " << player << " >> ";
 }
 
 /*********************************************************************
 ** Description:     g
 *********************************************************************/
-void Menu::menuDisplayPlayers(int type) {
+void Menu::menuDisplayPlayers(int first, int second) {
+    string fighterArray[] = {"Vampire", "Barbarian", "Blue Men",
+                             "Medusa", "Harry Potter"};
 
-    switch (validateNumber(1,5)) {
-        case 1:
-            fighterType[player] = VAMPIRE;
-            break;
-        case 2:
-            fighterType[player] = BARBARIAN;
-            break;
-        case 3:
-            fighterType[player] = BLUEMEN;
-            break;
-        case 4:
-            fighterType[player] = MEDUSA;
-            break;
-        case 5:
-            fighterType[player] = HARRYPOTTER;
-            break;
-        default:
-            cout << "Unable to determine fighter type\n";
-    }
+    cout << "Fighter One - " << fighterArray[first - 1] << endl;
+    cout << "Fighter Two - " << fighterArray[second - 1] << endl;
 }
 
 

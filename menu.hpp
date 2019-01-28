@@ -17,9 +17,11 @@
 #define MENU_HPP
 
 #include <iostream>
+#include <string>
 #include <cstring>
 #include <sstream>
 #include <iomanip>
+using std::string;
 using std::cin;
 using std::cout;
 using std::endl;
@@ -29,7 +31,7 @@ public:
     void mainMenu();
     void menuSelectFighter(int player);
     int validateNumber(int min, int max);
-    void menuDisplayPlayers(int type);
+    void menuDisplayPlayers(int fighter1, int fighter2);
     void menuExitGame();
 
 private:

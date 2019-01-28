@@ -105,9 +105,12 @@ void Game::selectPlayer() {
     }
 
     // confirm players with user
+    int type[2] = {};
     for (int player: {0,1}) {
-        menu.menuDisplayPlayers(fighterType[player]);
+        type[player] = fighterType[player];
     }
+    menu.menuDisplayPlayers(type[0], type[1]);
+
 }
 
 
