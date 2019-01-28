@@ -71,7 +71,7 @@ void Vampire::attack(Character *defender) {
 
     // roll dice
     attackValue = rollDice("attack");
-
+    cout << "Attack value" << attackValue << endl;
 }
 
 /*********************************************************************
