@@ -73,12 +73,13 @@ void Vampire::attackPlayer(Character *defender) {
     attackVal = rollDice("attack");
     cout << "Attack value " << attackVal << endl << endl;
     attackValue = attackVal;
+    cout << "Attack value " << attackVal << endl << endl;
 }
 
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void Vampire::defend() {
+void Vampire::defend(int attackVal) {
     cout << "Vampire defends!" << endl;
     int defendValue = 0;
 

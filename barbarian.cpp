@@ -76,12 +76,13 @@ void Barbarian::attackPlayer(Character *defender) {
     attackVal = rollDice("attack");
     cout << "Attack value " << attackVal << endl << endl;
     attackValue = attackVal;
+    cout << "Attack value " << attackVal << endl << endl;
 }
 
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void Barbarian::defend() {
+void Barbarian::defend(int attackVal) {
     cout << "Barbarian defends!" << endl;
     int defendValue = 0;
 
