@@ -23,6 +23,7 @@ public:
     Character();
     Character(int attacks, int defense, int armor, int strength);
     virtual ~Character();
+    virtual void initializeDice() = 0;
     virtual void attack() = 0;
     virtual void rollDice() = 0;
 

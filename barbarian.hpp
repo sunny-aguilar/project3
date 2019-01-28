@@ -26,6 +26,7 @@ class Barbarian : public Character {
 public:
     Barbarian();
     ~Barbarian() override;
+    void initializeDice() override;
     void attack() override;
     void rollDice() override;
 
