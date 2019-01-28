@@ -19,7 +19,10 @@
 ** Description:     no-args default constructor that sets the member
 **                  variables
 *********************************************************************/
-Barbarian::Barbarian() : Character{1,1,0,12} {}
+Barbarian::Barbarian() : Character{1,1,0,12} {
+    attackDice = new Dice*[2];
+    defenseDice = new Dice*[2];
+}
 
 /*********************************************************************
 ** Description:     virtual destructor
@@ -34,3 +37,8 @@ void Barbarian::attack() {
     cout << "Barbarian attacks!" << endl;
 }
 
+
+void Barbarian::rollDice() {
+//    cout << "Barbarian Random Int " << attackDice->randomInt() << endl;
+//    cout << "Barbarian Random Int " << defenseDice->randomInt() << endl;
+}

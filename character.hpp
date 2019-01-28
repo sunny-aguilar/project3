@@ -24,15 +24,15 @@ public:
     Character(int attacks, int defense, int armor, int strength);
     virtual ~Character();
     virtual void attack() = 0;
+    virtual void rollDice() = 0;
 
 protected:
     int attacks;
     int defense;
     int armor;
     int strength;
-    Dice attackDice;
-    Dice defenseDice;
-
+    Dice **attackDice;
+    Dice **defenseDice;
 
 private:
 

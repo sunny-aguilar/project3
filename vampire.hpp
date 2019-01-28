@@ -27,7 +27,7 @@ public:
     Vampire();
     ~Vampire() override;
     void attack() override;
-
+    void rollDice() override;
 
 private:
 

@@ -137,9 +137,11 @@ void Game::startCombat() {
 //    do {
         // first player attacks
         playerOne->attack();
+        playerOne->rollDice();
 
         // second player attacks
         playerTwo->attack();
+        playerTwo->rollDice();
 
 //    } while ();
 }

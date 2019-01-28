@@ -19,7 +19,13 @@
 ** Description:     no-args default constructor that sets the member
 **                  variables
 *********************************************************************/
-Vampire::Vampire() : Character{1,1,1,18} {}
+Vampire::Vampire() :
+    Character{1,1,1,18} {
+//    attackDice(new Dice*[1]);
+//    defenseDice(new Dice*[1]);
+    attackDice = new Dice*[1];
+    defenseDice = new Dice*[1];
+}
 
 
 /*********************************************************************
@@ -35,3 +41,8 @@ void Vampire::attack() {
     cout << "Vampire attacks!" << endl;
 }
 
+
+void Vampire::rollDice() {
+//    cout << "Vampire Random Int " << attackDice->randomInt() << endl;
+//    cout << "Vampire Random Int " << defenseDice->randomInt() << endl;
+}
