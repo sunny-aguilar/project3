@@ -140,11 +140,11 @@ void Game::startCombat() {
 
 //    do {
         // first player attacks
-        playerOne->attack(playerTwo);
+        playerOne->attackPlayer(playerTwo);
 
 
         // second player attacks
-        playerTwo->attack(playerOne);
+        playerTwo->attackPlayer(playerOne);
 
 
 //    } while ();

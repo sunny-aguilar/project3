@@ -18,13 +18,13 @@
 /*********************************************************************
 ** Description:     no-args default constructor that sets the member
 **                  variables
+**                  attack / defense / armor / strength
 *********************************************************************/
 Vampire::Vampire() :
     Character{1,1,1,18} {
     attackDice = new Dice*[1];
     defenseDice = new Dice*[1];
 }
-
 
 /*********************************************************************
 ** Description:     virtual destructor
@@ -65,13 +65,14 @@ int Vampire::rollDice(std::string action) {
 ** Description:     polymorphic function for attacking. Attack value
 **                  is 1d12.
 *********************************************************************/
-void Vampire::attack(Character *defender) {
+void Vampire::attackPlayer(Character *defender) {
     cout << "Vampire attacks!" << endl;
-    int attackValue = 0;
+    int attackVal = 0;
 
     // roll dice
-    attackValue = rollDice("attack");
-    cout << "Attack value " << attackValue << endl;
+    attackVal = rollDice("attack");
+    cout << "Attack value " << attackVal << endl;
+    attackValue = attackVal;
 }
 
 /*********************************************************************
@@ -80,5 +81,8 @@ void Vampire::attack(Character *defender) {
 void Vampire::defend() {
     cout << "Vampire defends!" << endl;
     int defendValue = 0;
+
+    // roll dice
+    defendValue = rollDice("defend");
 
 }

@@ -18,6 +18,7 @@
 /*********************************************************************
 ** Description:     no-args default constructor that sets the member
 **                  variables
+**                  attack / defense / armor / strength
 *********************************************************************/
 Barbarian::Barbarian() : Character{1,1,0,12} {
     attackDice = new Dice*[2];
@@ -67,13 +68,13 @@ int Barbarian::rollDice(std::string action) {
 ** Description:     polymorphic function for attacking. Attack value
 **                  is 2d6.
 *********************************************************************/
-void Barbarian::attack(Character *defender) {
+void Barbarian::attackPlayer(Character *defender) {
     cout << "Barbarian attacks!" << endl;
-    int attackValue = 0;
+    int attackVal = 0;
 
     // roll dice
-    attackValue = rollDice("attack");
-    cout << "Attack value " << attackValue << endl;
+    attackVal = rollDice("attack");
+    cout << "Attack value " << attackVal << endl;
 }
 
 /*********************************************************************
@@ -82,5 +83,8 @@ void Barbarian::attack(Character *defender) {
 void Barbarian::defend() {
     cout << "Barbarian defends!" << endl;
     int defendValue = 0;
-    
+
+    // roll dice
+    defendValue = rollDice("defend");
+
 }

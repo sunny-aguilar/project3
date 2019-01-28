@@ -24,8 +24,12 @@ Character::Character() {}
 /*********************************************************************
 ** Description:     constructor that sets the member variables
 *********************************************************************/
-Character::Character(int attacks, int defense, int armor, int strength) :
-    attacks{attacks}, defense{defense}, armor{armor}, strength{strength}{
+Character::Character(int attack, int defense, int armor, int strength) :
+    attack{attack},
+    defense{defense},
+    armor{armor},
+    strength{strength},
+    attackValue{0} {
 }
 
 /*********************************************************************

@@ -21,18 +21,19 @@
 class Character {
 public:
     Character();
-    Character(int attacks, int defense, int armor, int strength);
+    Character(int attack, int defense, int armor, int strength);
     virtual ~Character();
     virtual void initializeDice() = 0;
-    virtual void attack(Character *defender) = 0;
+    virtual void attackPlayer(Character *defender) = 0;
     virtual void defend() = 0;
     virtual int rollDice(std::string action) = 0;
 
 protected:
-    int attacks;
+    int attack;
     int defense;
     int armor;
     int strength;
+    int attackValue;
     Dice **attackDice;
     Dice **defenseDice;
 
