@@ -54,7 +54,6 @@ int Vampire::rollDice(std::string action) {
     int totalRolled = 0;
     if (action == "attack") {
         totalRolled += attackDice[0][0].randomInt();
-        totalRolled += attackDice[0][0].randomInt();
     }
     else if (action == "defend") {
         totalRolled += defenseDice[0][0].randomInt();
