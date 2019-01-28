@@ -93,17 +93,21 @@ void Vampire::defend() {
     // roll dice
     defendValue = rollDice("defend");
 
+    // calculate net damage received
     int damage = attackReceived - defendValue - armor;
     if (damage < 0) { damage = 0; }
     cout << "Damage Calc: Attack " << attackReceived
          << " - Defense " << defendValue << " - armor "
          << armor << endl;
-    cout << "Damage sustained " << damage << endl;
+
+    // update player strength
+    strengthUpdate(damage);
 }
 
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void Vampire::strengthUpdate() {
+void Vampire::strengthUpdate(int damage) {
+    cout << "Damage sustained " << damage << endl;
 
 }

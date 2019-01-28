@@ -28,7 +28,7 @@ public:
     virtual void attackPlayer(Character *defender) = 0;
     virtual void setAttackVal(int val) = 0;
     virtual void defend() = 0;
-    virtual void strengthUpdate();
+    virtual void strengthUpdate(int damage);
 
 protected:
     int attack;
