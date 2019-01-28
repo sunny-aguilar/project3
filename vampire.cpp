@@ -78,5 +78,7 @@ void Vampire::attack(Character *defender) {
 ** Description:     d
 *********************************************************************/
 void Vampire::defend() {
+    cout << "Vampire defends!" << endl;
+    int defendValue = 0;
 
 }

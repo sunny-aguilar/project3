@@ -80,5 +80,7 @@ void Barbarian::attack(Character *defender) {
 ** Description:     d
 *********************************************************************/
 void Barbarian::defend() {
-
+    cout << "Barbarian defends!" << endl;
+    int defendValue = 0;
+    
 }
