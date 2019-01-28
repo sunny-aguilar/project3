@@ -38,13 +38,13 @@ void Vampire::initializeDice() {
     attackDice[0] = new Dice[1];
     defenseDice[0] = new Dice[1];
 
-//    for (int index = 0; index < 1; index++) {
+    for (int index = 0; index < 1; index++) {
         attackDice[0][0] = Dice(12);
-//    }
-//
-//    for (int index = 0; index < 1; index++) {
-//        defenseDice[0][index] = Dice(6);
-//    }
+    }
+
+    for (int index = 0; index < 1; index++) {
+        defenseDice[0][index] = Dice(6);
+    }
 }
 
 void Vampire::rollDice() {
