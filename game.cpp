@@ -92,6 +92,12 @@ void Game::selectPlayer() {
             case 2:
                 {
                     fighterType[player] = BARBARIAN;
+                    if (player == 0) {
+                        playerOne = new Barbarian;
+                    }
+                    else if (player == 1) {
+                        playerTwo = new Barbarian;
+                    }
                 }
                 break;
             case 3:
@@ -128,13 +134,14 @@ void Game::selectPlayer() {
 *********************************************************************/
 void Game::startCombat() {
 
-    do {
+//    do {
         // first player attacks
+        playerOne->attack();
 
         // second player attacks
+        playerTwo->attack();
 
-
-    } while ();
+//    } while ();
 }
 
 

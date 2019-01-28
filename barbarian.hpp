@@ -16,9 +16,17 @@
 #ifndef BARBARIAN_HPP
 #define BARBARIAN_HPP
 
-class Barbarian {
+#include "character.hpp"
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+class Barbarian : public Character {
 public:
     Barbarian();
+    ~Barbarian() override;
+    void attack() override;
 
 private:
 

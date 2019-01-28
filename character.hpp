@@ -20,6 +20,7 @@ class Character {
 public:
     Character();
     Character(int attacks, int defense, int armor, int strength);
+    virtual ~Character();
     virtual void attack() = 0;
 
 protected:

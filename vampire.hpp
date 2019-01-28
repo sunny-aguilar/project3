@@ -18,11 +18,17 @@
 #define VAMPIRE_HPP
 
 #include "character.hpp"
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
 
 class Vampire : public Character {
 public:
     Vampire();
+    ~Vampire() override;
     void attack() override;
+
 private:
 
 };

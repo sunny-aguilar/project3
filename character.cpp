@@ -22,6 +22,11 @@
 Character::Character() {}
 
 /*********************************************************************
+** Description:     virtual destructor
+*********************************************************************/
+Character::~Character() {}
+
+/*********************************************************************
 ** Description:     constructor that sets the member variables
 *********************************************************************/
 Character::Character(int attacks, int defense, int armor, int strength) :

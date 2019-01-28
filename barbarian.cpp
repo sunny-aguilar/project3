@@ -19,13 +19,19 @@
 ** Description:     no-args default constructor that sets the member
 **                  variables
 *********************************************************************/
-Barbarian::Barbarian() {}
+Barbarian::Barbarian() : Character{1,1,0,12} {}
 
 /*********************************************************************
-** Description:     constructor that sets the member variables
+** Description:     virtual destructor
 *********************************************************************/
-Character::Character(int attacks, int defense, int armor, int strength) :
-        attacks{attacks}, defense{defense}, armor{armor}, strength{strength} {
+Barbarian::~Barbarian() {}
+
+/*********************************************************************
+** Description:     polymorphic function for attacking. Attack value
+**                  is 2d6.
+*********************************************************************/
+void Barbarian::attack() {
+    cout << "Barbarian attacks!" << endl;
 }
 
 
