@@ -111,6 +111,7 @@ void Barbarian::defend() {
 ** Description:     d
 *********************************************************************/
 void Barbarian::strengthUpdate(int damage) {
-    cout << "Damage sustained " << damage << endl << endl;
-
+    cout << "Damage sustained " << damage << endl;
+    strength -= damage;
+    cout << "Strength remaining " << strength << endl;
 }
