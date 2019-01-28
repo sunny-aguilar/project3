@@ -35,13 +35,6 @@ void Game::playGame() {
     menu.mainMenu();
     startGame();
 
-//    if () {
-//
-//    }
-//
-//
-//    // start game
-//    gameFlow();
 }
 
 /*********************************************************************
@@ -70,7 +63,8 @@ void Game::gameFlow() {
     // select player
     selectPlayer();
 
-
+    // start combat
+    startCombat();
 
 }
 
@@ -85,19 +79,35 @@ void Game::selectPlayer() {
         menu.menuSelectFighter(player+1);
         switch (menu.validateNumber(1,5)) {
             case 1:
-                fighterType[player] = VAMPIRE;
+                {
+                    fighterType[player] = VAMPIRE;
+                    if (player == 0) {
+                        playerOne = new Vampire;
+                    }
+                    else if (player == 1) {
+                        playerTwo = new Vampire;
+                    }
+                }
                 break;
             case 2:
-                fighterType[player] = BARBARIAN;
+                {
+                    fighterType[player] = BARBARIAN;
+                }
                 break;
             case 3:
-                fighterType[player] = BLUEMEN;
+                {
+                    fighterType[player] = BLUEMEN;
+                }
                 break;
             case 4:
-                fighterType[player] = MEDUSA;
+                {
+                    fighterType[player] = MEDUSA;
+                }
                 break;
             case 5:
-                fighterType[player] = HARRYPOTTER;
+                {
+                    fighterType[player] = HARRYPOTTER;
+                }
                 break;
             default:
                 cout << "Unable to determine fighter type\n";
@@ -112,6 +122,21 @@ void Game::selectPlayer() {
     menu.menuDisplayPlayers(type[0], type[1]);
 
 }
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Game::startCombat() {
+
+    do {
+        // first player attacks
+
+        // second player attacks
+
+
+    } while ();
+}
+
 
 
 /*********************************************************************

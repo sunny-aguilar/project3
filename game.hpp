@@ -18,6 +18,7 @@
 
 #include "menu.hpp"
 #include "character.hpp"
+#include "vampire.hpp"
 #include <ctime>
 
 enum Fighter {UNSET, VAMPIRE, BARBARIAN, BLUEMEN, MEDUSA, HARRYPOTTER};
@@ -29,6 +30,7 @@ public:
     void startGame();
     void gameFlow();
     void selectPlayer();
+    void startCombat();
     void exitGame();
 
 private:
@@ -36,6 +38,7 @@ private:
     Fighter fighterType[2];
     Character *playerOne;
     Character *playerTwo;
+    int rounds;
 
 };
 

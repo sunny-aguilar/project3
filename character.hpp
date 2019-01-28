@@ -27,7 +27,7 @@ protected:
     int defense;
     int armor;
     int strength;
-    
+
 private:
 
 };
