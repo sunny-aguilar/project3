@@ -75,7 +75,7 @@ void Vampire::attackPlayer(Character *defender) {
 
     // roll dice
     attack = rollDice("attack");
-    cout << "Deals " << attack << " attack points" << endl << endl;
+    cout << "Gets ready to deal " << attack << " attack points (1d12)" << endl << endl;
 
     // send attack value to defender object
     defender->setAttackVal(attack);
@@ -104,34 +104,38 @@ void Vampire::defend() {
     }
 
 
-    // roll dice
-    defendValue = rollDice("defend");
 
-    // calculate net damage received
-    int damage = attack - defendValue - armor;
-    if (damage < 0) { damage = 0; }
 
     // display damage received report
-    if (useSpecial == true) {
-        cout << "Vampire defense dice not activated\n";
-
+    if (useSpecial) {
+        cout << "Vampire has charmed his opponent and was not attacked!\n";
+        cout << strength << " - ending strength points\n\n";
         // reset special ability after use
         useSpecial = false;
     }
-    else if (useSpecial == false) {
+    else if (!useSpecial) {
+
+        // roll dice
+        defendValue = rollDice("defend");
+
+        // calculate net damage received
+        int damage = attack - defendValue - armor;
+        if (damage < 0) { damage = 0; }
         cout << "Defense blocked " << defendValue << " attack points\n";
+
+        cout << setw(2) << attack << " - attack points\n";
+        cout << setw(2) << defendValue << " - defense block (1d6)\n";
+        cout << setw(2) << armor << " - armor block\n";
+        cout << setw(2) << damage << " - inflicted damage\n";
+        cout << strength - damage << " - ending strength points\n\n";
+
+        // update player strength
+        damageReceived = damage;
     }
 
 
 
-    cout << setw(2) << attack << " - attack points\n";
-    cout << setw(2) << defendValue << " - defense block\n";
-    cout << setw(2) << armor << " - armor block\n";
-    cout << setw(2) << damage << " - inflicted damage\n";
-    cout << strength - damage << " - remaining strength points\n\n";
 
-    // update player strength
-    damageReceived = damage;
 }
 
 /*********************************************************************
@@ -142,7 +146,6 @@ void Vampire::specialAbility() {
     Dice dice(2);
     int num = dice.randomInt();
     if (num == 1) {
-        cout << "Vampire has charmed his opponent and was not attacked!\n";
         useSpecial = true;
     }
     else if (num == 2) {
