@@ -56,7 +56,7 @@ void Menu::menuDisplayPlayers(int first, int second) {
 }
 
 void Menu::menuRound(int round) {
-    cout << "\n ROUND \n" << round << endl
+    cout << "\n COMBAT ROUND " << round << endl <<
             "+--------------------------------------------------+\n";
 }
 

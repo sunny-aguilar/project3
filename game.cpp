@@ -137,10 +137,11 @@ void Game::selectPlayer() {
 ** Description:     d
 *********************************************************************/
 void Game::startCombat() {
-    rounds ++;
+
 
     do {
         // display banner for each round played
+        rounds ++;
         menu.menuRound(rounds);
 
         // first player attacks

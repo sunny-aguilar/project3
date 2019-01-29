@@ -32,6 +32,7 @@ public:
     void gameFlow();
     void selectPlayer();
     void startCombat();
+    void
     void exitGame();
 
 private:

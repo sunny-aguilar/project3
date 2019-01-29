@@ -116,7 +116,7 @@ void Vampire::strengthUpdate() {
 *********************************************************************/
 void Vampire::checkStrength() {
     if (strength < 1) {
-        playerAlive = false;
+        playerDead = true;
     }
 }
 
@@ -124,6 +124,6 @@ void Vampire::checkStrength() {
 ** Description:     d
 *********************************************************************/
 bool Vampire::playerStatus() {
-    return playerAlive;
+    return plaplayerDeadyerAlive;
 }
 
