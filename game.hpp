@@ -33,6 +33,7 @@ public:
     void selectPlayer();
     void startCombat();
     bool checkDeath(Character *defender);
+    bool playAgain();
     void exitGame();
 
 private:

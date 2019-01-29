@@ -36,6 +36,7 @@ public:
     void menuDisplayPlayers(int fighter1, int fighter2);
     void menuRound(int round);
     void menuDeath(string type);
+    void menuPlayAgain();
     void menuExitGame();
 
 private:

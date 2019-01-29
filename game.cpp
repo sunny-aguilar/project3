@@ -60,19 +60,18 @@ void Game::startGame() {
 ** Description:     d
 *********************************************************************/
 void Game::gameFlow() {
-    // select player
-    selectPlayer();
+    do {
+        // select player
+        selectPlayer();
 
-    // create combatant dice
-    playerOne->initializeDice();
-    playerTwo->initializeDice();
+        // create combatant dice
+        playerOne->initializeDice();
+        playerTwo->initializeDice();
 
-    // start combat
-    startCombat();
-
+        // start combat
+        startCombat();
+    } while (playAgain());
 }
-
-
 
 /*********************************************************************
 ** Description:     d
@@ -151,7 +150,6 @@ void Game::startCombat() {
             playerTwo->strengthUpdate();
             playerTwo->checkStrength();
             playerDead = checkDeath(playerTwo);
-            cout << "Is player1 dead? " << playerDead << endl;
         }
 
 
@@ -162,7 +160,6 @@ void Game::startCombat() {
             playerOne->strengthUpdate();
             playerOne->checkStrength();
             playerDead = checkDeath(playerOne);
-            cout << "Is player2 dead? " << playerDead << endl;
         }
 
         // pause between rounds
@@ -182,6 +179,25 @@ bool Game::checkDeath(Character *defender) {
         playerDied = true;
     }
     return playerDied;
+}
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+bool Game::playAgain() {
+    bool selection = false;
+    menu.menuPlayAgain();
+    switch (menu.validateNumber(1,2)) {
+        case 1:
+            selection = true;
+            break;
+        case 2:
+            selection = false;
+            break;
+        default:
+            cout << "Unable to determine your choice!\n";
+    }
+    return selection;
 }
 
 /*********************************************************************
