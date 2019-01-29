@@ -96,6 +96,9 @@ void Vampire::defend() {
     cout << "Strength points " << strength << endl << endl;
     int defendValue = 0;
 
+    // special defense **CHARM**
+    specialDefense();
+
     // roll dice
     defendValue = rollDice("defend");
 
@@ -114,6 +117,10 @@ void Vampire::defend() {
 
     // update player strength
     damageReceived = damage;
+}
+
+void Vampire::specialDefense() {
+
 }
 
 /*********************************************************************

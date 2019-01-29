@@ -34,6 +34,7 @@ public:
     void attackPlayer(Character *defender) override;
     void setAttackVal(int val) override;
     void defend() override;
+    void specialDefense();
     void strengthUpdate() override;
     void checkStrength() override;
     bool playerStatus() override;
