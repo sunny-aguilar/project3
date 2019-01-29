@@ -20,7 +20,8 @@
 **                  variables
 **                  attack / defense / armor / strength
 *********************************************************************/
-Barbarian::Barbarian() : Character{0,0,0,12} {
+Barbarian::Barbarian() :
+    Character{"Barbarian",0,0,0,12} {
     attackDice = new Dice*[2];
     defenseDice = new Dice*[2];
 }
@@ -30,6 +31,12 @@ Barbarian::Barbarian() : Character{0,0,0,12} {
 *********************************************************************/
 Barbarian::~Barbarian() {}
 
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+string Barbarian::getName() {
+    return name;
+}
 
 /*********************************************************************
 ** Description:     d

@@ -17,12 +17,15 @@
 #define CHARACTER_HPP
 
 #include "dice.hpp"
+#include <string>
+using std::string;
 
 class Character {
 public:
     Character();
-    Character(int attack, int defense, int armor, int strength);
+    Character(string name, int attack, int defense, int armor, int strength);
     virtual ~Character();
+    virtual string getName;
     virtual void initializeDice() = 0;
     virtual int rollDice(std::string action) = 0;
     virtual void attackPlayer(Character *defender) = 0;
@@ -33,6 +36,7 @@ public:
     virtual bool playerStatus() = 0;
 
 protected:
+    string name;
     int attack;
     int defense;
     int armor;

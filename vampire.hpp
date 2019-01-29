@@ -26,6 +26,7 @@ class Vampire : public Character {
 public:
     Vampire();
     ~Vampire() override;
+    string getName() override;
     void initializeDice() override;
     int rollDice(std::string action) override;
     void attackPlayer(Character *defender) override;

@@ -164,8 +164,9 @@ void Game::startCombat() {
 ** Description:     d
 *********************************************************************/
 void Game::checkDeath(Character *defender) {
-    defender->playerStatus();
-
+    if (defender->playerStatus()) {
+        cout << "The " << defender->getName << " has died!\n";
+    }
 }
 
 /*********************************************************************

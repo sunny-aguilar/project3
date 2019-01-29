@@ -21,7 +21,7 @@
 **                  attack / defense / armor / strength
 *********************************************************************/
 Vampire::Vampire() :
-    Character{0,0,1,18} {
+    Character{"Vampire",0,0,1,18} {
     attackDice = new Dice*[1];
     defenseDice = new Dice*[1];
 }
@@ -30,6 +30,13 @@ Vampire::Vampire() :
 ** Description:     virtual destructor
 *********************************************************************/
 Vampire::~Vampire() {}
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+string Vampire::getName() {
+    return name;
+}
 
 /*********************************************************************
 ** Description:     d
