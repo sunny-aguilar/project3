@@ -115,4 +115,17 @@ void Barbarian::strengthUpdate() {
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void Barbarian::checkStrength() {}
+void Barbarian::checkStrength() {
+    if (strength < 1) {
+        playerDead = true;
+    }
+}
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+bool Barbarian::playerStatus() {
+    return playerDead;
+}
+
+

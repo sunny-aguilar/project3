@@ -30,6 +30,7 @@ public:
     virtual void defend() = 0;
     virtual void strengthUpdate() = 0;
     virtual void checkStrength() = 0;
+    virtual bool playerStatus() = 0;
 
 protected:
     int attack;
@@ -38,6 +39,7 @@ protected:
     int strength;
     int attackReceived;
     int damageReceived;
+    bool playerDead;
     Dice **attackDice;
     Dice **defenseDice;
 

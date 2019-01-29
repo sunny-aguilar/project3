@@ -33,6 +33,7 @@ public:
     void defend() override;
     void strengthUpdate() override;
     void checkStrength() override;
+    bool playerStatus() override;
 
 private:
 

@@ -114,4 +114,16 @@ void Vampire::strengthUpdate() {
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void Vampire::checkStrength() {}
+void Vampire::checkStrength() {
+    if (strength < 1) {
+        playerDead = true;
+    }
+}
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+bool Vampire::playerStatus() {
+    return playerDead;
+}
+

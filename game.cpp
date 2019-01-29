@@ -138,7 +138,7 @@ void Game::selectPlayer() {
 *********************************************************************/
 void Game::startCombat() {
 
-//    do {
+    do {
         // first player attacks
         playerOne->attackPlayer(playerTwo);
         playerTwo->defend();
@@ -149,7 +149,7 @@ void Game::startCombat() {
         playerOne->defend();
         playerOne->strengthUpdate();
 
-//    } while ();
+    } while (playerOne->playerStatus() || playerTwo->playerStatus());
 }
 
 

@@ -30,7 +30,8 @@ Character::Character(int attack, int defense, int armor, int strength) :
     armor{armor},
     strength{strength},
     attackReceived{0},
-    damageReceived{0} {
+    damageReceived{0},
+    playerDead{false} {
 }
 
 /*********************************************************************
