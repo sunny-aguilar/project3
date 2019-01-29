@@ -140,7 +140,7 @@ void Game::startCombat() {
 
     do {
         // display banner for each round played
-        rounds ++;
+        rounds++;
         menu.menuRound(rounds);
 
         // first player attacks
