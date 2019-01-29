@@ -22,6 +22,8 @@
 #include <sstream>
 #include <iomanip>
 using std::string;
+using std::setw;
+using std::left;
 using std::cin;
 using std::cout;
 using std::endl;
@@ -33,6 +35,7 @@ public:
     int validateNumber(int min, int max);
     void menuDisplayPlayers(int fighter1, int fighter2);
     void menuRound(int round);
+    void menuDeath(string type);
     void menuExitGame();
 
 private:

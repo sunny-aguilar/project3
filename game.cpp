@@ -176,6 +176,7 @@ void Game::startCombat() {
 bool Game::checkDeath(Character *defender) {
     bool playerDied = false;
     if (defender->playerStatus()) {
+        menu.menuDeath(defender->getName());
         cout << "The " << defender->getName() << " has died!\n";
         playerDied = true;
     }
