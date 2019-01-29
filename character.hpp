@@ -25,7 +25,7 @@ public:
     Character();
     Character(string name, int attack, int defense, int armor, int strength);
     virtual ~Character();
-    virtual string getName;
+    virtual string getName();
     virtual void initializeDice() = 0;
     virtual int rollDice(std::string action) = 0;
     virtual void attackPlayer(Character *defender) = 0;
