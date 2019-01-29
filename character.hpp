@@ -29,6 +29,7 @@ public:
     virtual void setAttackVal(int val) = 0;
     virtual void defend() = 0;
     virtual void strengthUpdate() = 0;
+    virtual void checkStrength() = 0;
 
 protected:
     int attack;

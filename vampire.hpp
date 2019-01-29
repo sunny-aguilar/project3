@@ -32,6 +32,7 @@ public:
     void setAttackVal(int val) override;
     void defend() override;
     void strengthUpdate() override;
+    void checkStrength() override;
 
 private:
 

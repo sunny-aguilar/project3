@@ -111,3 +111,8 @@ void Barbarian::strengthUpdate() {
     strength -= damageReceived;
     cout << "Strength remaining " << strength << endl << endl;
 }
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Barbarian::checkStrength() {}

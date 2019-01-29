@@ -110,3 +110,8 @@ void Vampire::strengthUpdate() {
     strength -= damageReceived;
     cout << "Strength remaining " << strength << endl;
 }
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Vampire::checkStrength() {}
