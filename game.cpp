@@ -137,7 +137,7 @@ void Game::selectPlayer() {
 ** Description:     d
 *********************************************************************/
 void Game::startCombat() {
-
+    bool playerDead = false;
 
     do {
         // display banner for each round played
@@ -145,28 +145,41 @@ void Game::startCombat() {
         menu.menuRound(rounds);
 
         // first player attacks
-        playerOne->attackPlayer(playerTwo);
-        playerTwo->defend();
-        playerTwo->strengthUpdate();
-        playerTwo->checkStrength();
-        checkDeath(playerOne);
+        if (!playerDead) {
+            playerOne->attackPlayer(playerTwo);
+            playerTwo->defend();
+            playerTwo->strengthUpdate();
+            playerTwo->checkStrength();
+            playerDead = checkDeath(playerOne);
+        }
+
 
         // second player attacks
-        playerTwo->attackPlayer(playerOne);
-        playerOne->defend();
-        playerOne->strengthUpdate();
-        playerOne->checkStrength();
+        if (!playerDead) {
+            playerTwo->attackPlayer(playerOne);
+            playerOne->defend();
+            playerOne->strengthUpdate();
+            playerOne->checkStrength();
+            playerDead = checkDeath(playerOne);
+        }
 
-    } while (false);
+        // pause between rounds
+        cout << "\nHit [ENTER] to continue to next round\n";
+        cin.get();
+
+    } while (!playerDead);
 }
 
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void Game::checkDeath(Character *defender) {
+bool Game::checkDeath(Character *defender) {
+    bool playerDied = false;
     if (defender->playerStatus()) {
         cout << "The " << defender->getName() << " has died!\n";
+        playerDied = true;
     }
+    return playerDied;
 }
 
 /*********************************************************************

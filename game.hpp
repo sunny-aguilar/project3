@@ -32,7 +32,7 @@ public:
     void gameFlow();
     void selectPlayer();
     void startCombat();
-    void checkDeath(Character *defender);
+    bool checkDeath(Character *defender);
     void exitGame();
 
 private:
