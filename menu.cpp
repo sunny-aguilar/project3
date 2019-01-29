@@ -55,6 +55,10 @@ void Menu::menuDisplayPlayers(int first, int second) {
     cout << "Second Combatant - " << fighterArray[second - 1] << endl << endl;
 }
 
+void Menu::menuRound(int round) {
+    cout << "\n ROUND \n" << round << endl
+            "+--------------------------------------------------+\n";
+}
 
 /*********************************************************************
 ** Description:     g

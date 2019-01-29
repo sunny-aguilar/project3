@@ -137,17 +137,23 @@ void Game::selectPlayer() {
 ** Description:     d
 *********************************************************************/
 void Game::startCombat() {
+    rounds ++;
 
     do {
+        // display banner for each round played
+        menu.menuRound(rounds);
+
         // first player attacks
         playerOne->attackPlayer(playerTwo);
         playerTwo->defend();
         playerTwo->strengthUpdate();
+        playerTwo->checkStrength();
 
         // second player attacks
         playerTwo->attackPlayer(playerOne);
         playerOne->defend();
         playerOne->strengthUpdate();
+        playerOne->checkStrength();
 
     } while (playerOne->playerStatus() || playerTwo->playerStatus());
 }

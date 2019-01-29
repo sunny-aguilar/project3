@@ -32,6 +32,7 @@ public:
     void menuSelectFighter(int player);
     int validateNumber(int min, int max);
     void menuDisplayPlayers(int fighter1, int fighter2);
+    void menuRound(int round);
     void menuExitGame();
 
 private:
