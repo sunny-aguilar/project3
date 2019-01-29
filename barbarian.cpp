@@ -111,7 +111,7 @@ void Barbarian::defend() {
     cout << setw(2) << defendValue << " - defense block\n";
     cout << setw(2) << armor << " - armor block\n";
     cout << setw(2) << damage << " - inflicted damage\n";
-    cout << strength - damage << " - remaining strength points\n";
+    cout << strength - damage << " - remaining strength points\n\n";
 
     // update player strength
     damageReceived = damage;
@@ -140,4 +140,9 @@ bool Barbarian::playerStatus() {
     return playerDead;
 }
 
-
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Barbarian::specialAbility() {
+    // barbarian has no special ability
+}

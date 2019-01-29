@@ -97,7 +97,12 @@ void Vampire::defend() {
     int defendValue = 0;
 
     // special defense **CHARM**
-    specialDefense();
+    specialAbility();
+    if (useSpecial) {
+        attack = 0;
+
+    }
+
 
     // roll dice
     defendValue = rollDice("defend");
@@ -107,22 +112,42 @@ void Vampire::defend() {
     if (damage < 0) { damage = 0; }
 
     // display damage received report
-    cout << "Defense blocked " << defendValue << " attack points\n";
+    if (useSpecial == true) {
+        cout << "Vampire defense dice not activated\n";
+
+        // reset special ability after use
+        useSpecial = false;
+    }
+    else if (useSpecial == false) {
+        cout << "Defense blocked " << defendValue << " attack points\n";
+    }
+
+
 
     cout << setw(2) << attack << " - attack points\n";
     cout << setw(2) << defendValue << " - defense block\n";
     cout << setw(2) << armor << " - armor block\n";
     cout << setw(2) << damage << " - inflicted damage\n";
-    cout << strength - damage << " - remaining strength points\n";
+    cout << strength - damage << " - remaining strength points\n\n";
 
     // update player strength
     damageReceived = damage;
 }
 
-void Vampire::specialDefense() {
-    Dice dice(2);
-    cout << "Vampire special defense die " << dice.randomInt() << endl;
+/*********************************************************************
+** Description:     special ability
+*********************************************************************/
+void Vampire::specialAbility() {
 
+    Dice dice(2);
+    int num = dice.randomInt();
+    if (num == 1) {
+        cout << "Vampire has charmed his opponent and was not attacked!\n";
+        useSpecial = true;
+    }
+    else if (num == 2) {
+        useSpecial = false;
+    }
 }
 
 /*********************************************************************

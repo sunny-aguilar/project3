@@ -31,7 +31,8 @@ Character::Character(string name, int attack, int defense, int armor, int streng
     armor{armor},
     strength{strength},
     damageReceived{0},
-    playerDead{false} {
+    playerDead{false},
+    useSpecial{false} {
 }
 
 /*********************************************************************

@@ -37,6 +37,7 @@ public:
     void strengthUpdate() override;
     void checkStrength() override;
     bool playerStatus() override;
+    void specialAbility() override;
 
 private:
 
