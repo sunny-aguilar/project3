@@ -75,7 +75,7 @@ void Menu::menuDeath(string type) {
             "                       .-'~~~~~~`-.\n"
             "                     .'            `.\n"
             "                     |   R  I  P    |\n"
-            "                     |              |\n"
+            "                     |              |\n";
     if (type == "Harry Potter") {
         cout << "                     | " << left << setw(12) << "Harry Potter |\n";
     }
