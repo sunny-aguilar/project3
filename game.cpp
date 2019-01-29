@@ -150,7 +150,8 @@ void Game::startCombat() {
             playerTwo->defend();
             playerTwo->strengthUpdate();
             playerTwo->checkStrength();
-            playerDead = checkDeath(playerOne);
+            playerDead = checkDeath(playerTwo);
+            cout << "Is player1 dead? " << playerDead << endl;
         }
 
 
@@ -161,11 +162,12 @@ void Game::startCombat() {
             playerOne->strengthUpdate();
             playerOne->checkStrength();
             playerDead = checkDeath(playerOne);
+            cout << "Is player2 dead? " << playerDead << endl;
         }
 
         // pause between rounds
         cout << "\nHit [ENTER] to continue to next round\n";
-        cin.get();
+        cin.ignore();
 
     } while (!playerDead);
 }

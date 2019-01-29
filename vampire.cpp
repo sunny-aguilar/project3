@@ -122,6 +122,7 @@ void Vampire::strengthUpdate() {
 ** Description:     d
 *********************************************************************/
 void Vampire::checkStrength() {
+    cout << "checkStrength val " << strength << endl;
     if (strength < 1) {
         playerDead = true;
     }
