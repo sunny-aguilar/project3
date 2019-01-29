@@ -116,7 +116,7 @@ void Vampire::strengthUpdate() {
 *********************************************************************/
 void Vampire::checkStrength() {
     if (strength < 1) {
-        playerAlive = true;
+        playerAlive = false;
     }
 }
 

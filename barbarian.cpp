@@ -117,7 +117,7 @@ void Barbarian::strengthUpdate() {
 *********************************************************************/
 void Barbarian::checkStrength() {
     if (strength < 1) {
-        playerAlive = true;
+        playerAlive = false;
     }
 }
 
