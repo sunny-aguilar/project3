@@ -110,6 +110,7 @@ void Vampire::defend() {
     cout << setw(2) << defendValue << " - defense block\n";
     cout << setw(2) << armor << " - armor block\n";
     cout << setw(2) << damage << " - inflicted damage\n";
+    cout << strength - damage << " - remaining strength points\n";
 
     // update player strength
     damageReceived = damage;
@@ -120,7 +121,6 @@ void Vampire::defend() {
 *********************************************************************/
 void Vampire::strengthUpdate() {
     strength -= damageReceived;
-    cout << "Strength remaining " << strength << endl;
 }
 
 /*********************************************************************
