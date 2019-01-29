@@ -157,7 +157,7 @@ void Game::startCombat() {
         playerOne->strengthUpdate();
         playerOne->checkStrength();
 
-    } while (/* stop looping if a player dies*/);
+    } while (false);
 }
 
 /*********************************************************************
@@ -165,7 +165,7 @@ void Game::startCombat() {
 *********************************************************************/
 void Game::checkDeath(Character *defender) {
     if (defender->playerStatus()) {
-        cout << "The " << defender->getName << " has died!\n";
+        cout << "The " << defender->getName() << " has died!\n";
     }
 }
 
