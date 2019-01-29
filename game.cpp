@@ -149,6 +149,7 @@ void Game::startCombat() {
         playerTwo->defend();
         playerTwo->strengthUpdate();
         playerTwo->checkStrength();
+        checkDeath(playerOne);
 
         // second player attacks
         playerTwo->attackPlayer(playerOne);
@@ -156,10 +157,16 @@ void Game::startCombat() {
         playerOne->strengthUpdate();
         playerOne->checkStrength();
 
-    } while (playerOne->playerStatus() || playerTwo->playerStatus());
+    } while (/* stop looping if a player dies*/);
 }
 
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Game::checkDeath(Character *defender) {
+    defender->playerStatus();
 
+}
 
 /*********************************************************************
 ** Description:     d

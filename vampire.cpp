@@ -124,6 +124,6 @@ void Vampire::checkStrength() {
 ** Description:     d
 *********************************************************************/
 bool Vampire::playerStatus() {
-    return plaplayerDeadyerAlive;
+    return playerDead;
 }
 
