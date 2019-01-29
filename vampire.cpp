@@ -21,7 +21,7 @@
 **                  attack / defense / armor / strength
 *********************************************************************/
 Vampire::Vampire() :
-    Character{1,1,1,18} {
+    Character{0,0,1,18} {
     attackDice = new Dice*[1];
     defenseDice = new Dice*[1];
 }
@@ -64,20 +64,21 @@ int Vampire::rollDice(std::string action) {
 *********************************************************************/
 void Vampire::attackPlayer(Character *defender) {
     cout << "Vampire attacks!" << endl;
-    int attackVal = 0;
+    attack = 0;
 
     // roll dice
-    attackVal = rollDice("attack");
-    attackReceived = attackVal;
-    cout << "Attack value " << attackVal << endl << endl;
-    defender->setAttackVal(attackReceived);
+    attack = rollDice("attack");
+    cout << "Attack value " << attack << endl << endl;
+
+    // send attack value to defender object
+    defender->setAttackVal(attack);
 }
 
 /*********************************************************************
 ** Description:     sets the attack damage received
 *********************************************************************/
 void Vampire::setAttackVal(int val) {
-    attackReceived = val;
+    attack = val;
 }
 
 /*********************************************************************
@@ -91,15 +92,14 @@ void Vampire::defend() {
     defendValue = rollDice("defend");
 
     // calculate net damage received
-    int damage = attackReceived - defendValue - armor;
+    int damage = attack - defendValue - armor;
     if (damage < 0) { damage = 0; }
-    cout << "Damage Calc: Attack " << attackReceived
+    cout << "Damage Calc: Attack " << attack
          << " - Defense " << defendValue << " - armor "
          << armor << endl;
 
     // update player strength
     damageReceived = damage;
-//    strengthUpdate();
 }
 
 /*********************************************************************
@@ -116,7 +116,7 @@ void Vampire::strengthUpdate() {
 *********************************************************************/
 void Vampire::checkStrength() {
     if (strength < 1) {
-        playerDead = true;
+        playerAlive = true;
     }
 }
 
@@ -124,6 +124,6 @@ void Vampire::checkStrength() {
 ** Description:     d
 *********************************************************************/
 bool Vampire::playerStatus() {
-    return playerDead;
+    return playerAlive;
 }
 

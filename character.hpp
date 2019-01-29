@@ -37,9 +37,8 @@ protected:
     int defense;
     int armor;
     int strength;
-    int attackReceived;
     int damageReceived;
-    bool playerDead;
+    bool playerAlive;
     Dice **attackDice;
     Dice **defenseDice;
 

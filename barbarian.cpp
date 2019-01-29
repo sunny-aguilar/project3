@@ -20,7 +20,7 @@
 **                  variables
 **                  attack / defense / armor / strength
 *********************************************************************/
-Barbarian::Barbarian() : Character{1,1,0,12} {
+Barbarian::Barbarian() : Character{0,0,0,12} {
     attackDice = new Dice*[2];
     defenseDice = new Dice*[2];
 }
@@ -65,20 +65,21 @@ int Barbarian::rollDice(std::string action) {
 *********************************************************************/
 void Barbarian::attackPlayer(Character *defender) {
     cout << "Barbarian attacks!" << endl;
-    int attackVal = 0;
+    attack = 0;
 
     // roll dice
-    attackVal = rollDice("attack");
-    attackReceived = attackVal;
-    cout << "Attack value " << attackVal << endl << endl;
-    defender->setAttackVal(attackReceived);
+    attack = rollDice("attack");
+    cout << "Attack value " << attack << endl << endl;
+
+    // send attack value to defender object
+    defender->setAttackVal(attack);
 }
 
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
 void Barbarian::setAttackVal(int val) {
-    attackReceived = val;
+    attack = val;
 }
 
 /*********************************************************************
@@ -92,15 +93,14 @@ void Barbarian::defend() {
     defendValue = rollDice("defend");
 
     // calculate net damage received
-    int damage = attackReceived - defendValue - armor;
+    int damage = attack - defendValue - armor;
     if (damage < 0) { damage = 0; }
-    cout << "Damage Calc: Attack " << attackReceived
+    cout << "Damage Calc: Attack " << attack
          << " - Defense " << defendValue << " - armor "
          << armor << endl;
 
     // update player strength
     damageReceived = damage;
-//    strengthUpdate();
 }
 
 /*********************************************************************
@@ -117,7 +117,7 @@ void Barbarian::strengthUpdate() {
 *********************************************************************/
 void Barbarian::checkStrength() {
     if (strength < 1) {
-        playerDead = true;
+        playerAlive = true;
     }
 }
 
@@ -125,7 +125,7 @@ void Barbarian::checkStrength() {
 ** Description:     d
 *********************************************************************/
 bool Barbarian::playerStatus() {
-    return playerDead;
+    return playerAlive;
 }
 
 
