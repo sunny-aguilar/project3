@@ -67,7 +67,7 @@ void Menu::menuRound(int round) {
 ** Description:     g
 *********************************************************************/
 void Menu::menuDeath(string type) {
-    cout << "\n " << type << " has died!\n"
+    cout << "\n >>" << type << " has died!\n"
             "+--------------------------------------------------+\n\n";
     cout << "                            .\n"
             "                           -|-\n"
