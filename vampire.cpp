@@ -70,12 +70,12 @@ int Vampire::rollDice(std::string action) {
 **                  is 1d12.
 *********************************************************************/
 void Vampire::attackPlayer(Character *defender) {
-    cout << "Vampire attacks!" << endl;
+    cout << "Vampire attacks!   -|---" << endl;
     attack = 0;
 
     // roll dice
     attack = rollDice("attack");
-    cout << "Attack value " << attack << endl << endl;
+    cout << "Deals " << attack << " attack points" << endl << endl;
 
     // send attack value to defender object
     defender->setAttackVal(attack);
@@ -92,7 +92,8 @@ void Vampire::setAttackVal(int val) {
 ** Description:     d
 *********************************************************************/
 void Vampire::defend() {
-    cout << "Vampire defends!" << endl;
+    cout << "Vampire defends!   )))" << endl;
+    cout << "Strength points " << strength << endl << endl;
     int defendValue = 0;
 
     // roll dice
@@ -101,9 +102,14 @@ void Vampire::defend() {
     // calculate net damage received
     int damage = attack - defendValue - armor;
     if (damage < 0) { damage = 0; }
-    cout << "Damage Calc: Attack " << attack
-         << " - Defense " << defendValue << " - armor "
-         << armor << endl;
+
+    // display damage received report
+    cout << "Defense blocked " << defendValue << " attack points\n";
+
+    cout << setw(2) << attack << " - attack points\n";
+    cout << setw(2) << defendValue << " - defense block\n";
+    cout << setw(2) << armor << " - armor block\n";
+    cout << setw(2) << damage << " - inflicted damage\n";
 
     // update player strength
     damageReceived = damage;
@@ -113,7 +119,6 @@ void Vampire::defend() {
 ** Description:     d
 *********************************************************************/
 void Vampire::strengthUpdate() {
-    cout << "Damage sustained " << damageReceived << endl;
     strength -= damageReceived;
     cout << "Strength remaining " << strength << endl;
 }
