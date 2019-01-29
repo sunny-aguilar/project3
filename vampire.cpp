@@ -120,6 +120,8 @@ void Vampire::defend() {
 }
 
 void Vampire::specialDefense() {
+    Dice dice(2);
+    cout << "Vampire special defense die " << dice.randomInt() << endl;
 
 }
 
