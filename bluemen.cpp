@@ -57,7 +57,8 @@ void BlueMen::initializeDice() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     blue men start out with 3 defense dice and a dice
+ *                  is removed for every 4 points of damage received
 *********************************************************************/
 int BlueMen::rollDice(std::string action) {
     int totalRolled = 0;
@@ -66,9 +67,18 @@ int BlueMen::rollDice(std::string action) {
         totalRolled += attackDice[0][1].randomInt();
     }
     else if (action == "defend") {
-        totalRolled += defenseDice[0][0].randomInt();
-        totalRolled += defenseDice[0][1].randomInt();
-        totalRolled += defenseDice[0][2].randomInt();
+        if (strength == 12) {
+            totalRolled += defenseDice[0][0].randomInt();
+            totalRolled += defenseDice[0][1].randomInt();
+            totalRolled += defenseDice[0][2].randomInt();
+        }
+        else if (strength < 12 && strength >= 8) {
+            totalRolled += defenseDice[0][0].randomInt();
+            totalRolled += defenseDice[0][1].randomInt();
+        }
+        else if (strength < 8) {
+            totalRolled += defenseDice[0][0].randomInt();
+        }
     }
     return totalRolled;
 }
@@ -133,6 +143,15 @@ void BlueMen::defend() {
 *********************************************************************/
 void BlueMen::specialAbility() {
     useSpecial = true;
+    if (strength == 12) {
+        cout << "Blue men defends with 3 defense dice\n";
+    }
+    else if (strength < 12 && strength >= 8) {
+        cout << "Blue men defends with 2 defense dice\n";
+    }
+    else if (strength < 8) {
+        cout << "Blue men defends with 1 defense dice\n";
+    }
 }
 
 /*********************************************************************
