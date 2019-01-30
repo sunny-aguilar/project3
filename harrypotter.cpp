@@ -103,8 +103,7 @@ void HarryPotter::defend() {
     cout << "Strength points " << strength << endl << endl;
     int defendValue = 0;
 
-    // special defense **Hogwarts**
-    specialAbility();
+
 
     // roll dice
     defendValue = rollDice("defend");
@@ -120,8 +119,17 @@ void HarryPotter::defend() {
     cout << setw(2) << damage << " - damage inflicted\n";
     cout << setw(2) << strength - damage << " - ending strength points\n\n";
 
-    // update player strength
-    damageReceived = damage;
+    // special defense **Hogwarts**
+    if ((strength - damage < 1)) {
+        specialAbility();
+        cout << "Harry Potter's strength points have dropped below 1!\n";
+        cout << "Harry Potter has used Hogwarts and now has a total of 20 strength points\n";    }
+    else {
+        // update player strength
+        damageReceived = damage;
+    }
+
+
 }
 
 /*********************************************************************
@@ -129,7 +137,6 @@ void HarryPotter::defend() {
 *********************************************************************/
 void HarryPotter::specialAbility() {
     useSpecial = true;
-
 }
 
 /*********************************************************************
