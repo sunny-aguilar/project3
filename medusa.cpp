@@ -86,7 +86,6 @@ void Medusa::attackPlayer(Character *defender) {
     specialAbility();
     if (useSpecial) {
         attack = 1000;
-        cout << "Medusa has used glare!!!\n";
     }
 
     // send attack value to defender object
