@@ -114,7 +114,7 @@ void HarryPotter::defend() {
     cout << "Defense blocked " << defendValue << " attack points (2d6)\n";
 
     cout << setw(2) << attack << " - attack points\n";
-    cout << setw(2) << defendValue << " - defense block (1d6)\n";
+    cout << setw(2) << defendValue << " - defense block\n";
     cout << setw(2) << armor << " - armor block\n";
     cout << setw(2) << damage << " - damage inflicted\n";
     cout << setw(2) << strength - damage << " - ending strength points\n\n";
