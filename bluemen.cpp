@@ -135,7 +135,6 @@ void BlueMen::defend() {
 
     // update player strength
     damageReceived = damage;
-
 }
 
 /*********************************************************************
