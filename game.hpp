@@ -30,6 +30,7 @@ enum Fighter {UNSET, VAMPIRE, BARBARIAN, BLUEMEN, MEDUSA, HARRYPOTTER};
 class Game {
 public:
     Game();
+    ~Game();
     void playGame();
     void startGame();
     void gameFlow();

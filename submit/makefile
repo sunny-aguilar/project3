@@ -22,8 +22,6 @@ OBJECTS += medusa.o
 OBJECTS += harrypotter.o
 OBJECTS += menu.o
 
-
-HPPs = zoo.hpp
 HPPs += game.hpp
 HPPs += character.hpp
 HPPs += dice.hpp
@@ -54,7 +52,7 @@ Fight: $(OBJECTS)
 main.o: main.cpp $(HPPs)
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
-game.o: zoo.hpp
+game.o: game.hpp
 
 character.o: character.hpp
 

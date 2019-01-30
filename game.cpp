@@ -22,6 +22,15 @@
 Game::Game(): fighterType{UNSET}, rounds{0} {}
 
 /*********************************************************************
+** Description:     destructor
+*********************************************************************/
+Game::~Game() {
+    // delete players
+    delete playerOne;
+    delete playerTwo;
+}
+
+/*********************************************************************
 ** Description:     this function is called from main to get the game
 **                  started.
 **                  d
