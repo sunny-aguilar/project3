@@ -107,10 +107,10 @@ void Game::selectPlayer() {
                 {
                     fighterType[player] = BLUEMEN;
                     if (player == 0) {
-                        playerOne = new Barbarian;
+                        playerOne = new BlueMen;
                     }
                     else if (player == 1) {
-                        playerTwo = new Barbarian;
+                        playerTwo = new BlueMen;
                     }
                 }
                 break;
