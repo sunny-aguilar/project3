@@ -95,6 +95,7 @@ void Medusa::setAttackVal(int val) {
     specialAbility();
     if (useSpecial) {
         attack = 1000;
+        cout << "Medusa has used glare!!!\n";
     }
     else {
         attack = val;
