@@ -82,6 +82,13 @@ void Medusa::attackPlayer(Character *defender) {
     attack = rollDice("attack");
     cout << "Gets ready to deal " << attack << " attack points (1d12)" << endl << endl;
 
+    // special attack **Glare**
+    specialAbility();
+    if (useSpecial) {
+        attack = 1000;
+        cout << "Medusa has used glare!!!\n";
+    }
+
     // send attack value to defender object
     defender->setAttackVal(attack);
 }
@@ -91,15 +98,7 @@ void Medusa::attackPlayer(Character *defender) {
  *                  a 12, then she uses her *Glare* special ability
 *********************************************************************/
 void Medusa::setAttackVal(int val) {
-    // special attack **Glare**
-    specialAbility();
-    if (useSpecial) {
-        attack = 1000;
-        cout << "Medusa has used glare!!!\n";
-    }
-    else {
-        attack = val;
-    }
+    attack = val;
 }
 
 /*********************************************************************
