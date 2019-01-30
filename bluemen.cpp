@@ -96,7 +96,16 @@ void BlueMen::setAttackVal(int val) {
     attack = val;
 }
 
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void BlueMen::defend() {
+    cout << ">>Blue Men defends!    )))" << endl;
+    cout << "Strength points " << strength << endl << endl;
 
+
+    
+}
 
 
 
