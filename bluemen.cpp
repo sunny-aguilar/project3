@@ -43,6 +43,7 @@ string BlueMen::getName() {
 **                  requirements
 *********************************************************************/
 void BlueMen::initializeDice() {
+    cout << "Dice created**********\n";
     attackDice[0] = new Dice[2];
     defenseDice[0] = new Dice[3];
 
@@ -80,6 +81,7 @@ int BlueMen::rollDice(std::string action) {
             totalRolled += defenseDice[0][0].randomInt();
         }
     }
+    cout << "Dice rolled**********\n";
     return totalRolled;
 }
 
