@@ -70,7 +70,7 @@ int Vampire::rollDice(std::string action) {
 **                  is 1d12.
 *********************************************************************/
 void Vampire::attackPlayer(Character *defender) {
-    cout << "Vampire attacks!   -|---" << endl;
+    cout << ">>Vampire attacks!    -|---" << endl;
     attack = 0;
 
     // roll dice
@@ -92,22 +92,16 @@ void Vampire::setAttackVal(int val) {
 ** Description:     d
 *********************************************************************/
 void Vampire::defend() {
-    cout << "Vampire defends!   )))" << endl;
+    cout << ">>Vampire defends!    )))" << endl;
     cout << "Strength points " << strength << endl << endl;
     int defendValue = 0;
 
     // special defense **CHARM**
     specialAbility();
-    if (useSpecial) {
-        attack = 0;
-
-    }
-
-
-
 
     // display damage received report
     if (useSpecial) {
+        attack = 0;
         cout << "Vampire has charmed his opponent and was not attacked!\n";
         cout << strength << " - ending strength points\n\n";
         // reset special ability after use
@@ -126,8 +120,8 @@ void Vampire::defend() {
         cout << setw(2) << attack << " - attack points\n";
         cout << setw(2) << defendValue << " - defense block (1d6)\n";
         cout << setw(2) << armor << " - armor block\n";
-        cout << setw(2) << damage << " - inflicted damage\n";
-        cout << strength - damage << " - ending strength points\n\n";
+        cout << setw(2) << damage << " - damage inflicted\n";
+        cout << setw(2) << strength - damage << " - ending strength points\n\n";
 
         // update player strength
         damageReceived = damage;

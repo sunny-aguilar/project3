@@ -151,7 +151,7 @@ void Game::startCombat() {
             playerTwo->checkStrength();
             playerDead = checkDeath(playerTwo);
         }
-
+        cout << endl;
 
         // second player attacks
         if (!playerDead) {

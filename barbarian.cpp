@@ -71,7 +71,7 @@ int Barbarian::rollDice(std::string action) {
 **                  is 2d6.
 *********************************************************************/
 void Barbarian::attackPlayer(Character *defender) {
-    cout << "Barbarian attacks!   -|---" << endl;
+    cout << ">>Barbarian attacks!    -|---" << endl;
     attack = 0;
 
     // roll dice
@@ -93,7 +93,7 @@ void Barbarian::setAttackVal(int val) {
 ** Description:     d
 *********************************************************************/
 void Barbarian::defend() {
-    cout << "Barbarian defends!   )))" << endl;
+    cout << ">>Barbarian defends!    )))" << endl;
     cout << "Strength points " << strength << endl << endl;
     int defendValue = 0;
 
@@ -110,8 +110,8 @@ void Barbarian::defend() {
     cout << setw(2) << attack << " - attack points\n";
     cout << setw(2) << defendValue << " - defense block\n";
     cout << setw(2) << armor << " - armor block\n";
-    cout << setw(2) << damage << " - inflicted damage\n";
-    cout << strength - damage << " - ending strength points\n\n";
+    cout << setw(2) << damage << " - damage inflicted\n";
+    cout << setw(2) << strength - damage << " - ending strength points\n\n";
 
     // update player strength
     damageReceived = damage;
