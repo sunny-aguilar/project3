@@ -97,7 +97,7 @@ void Vampire::setAttackVal(int val) {
 *********************************************************************/
 void Vampire::defend() {
     cout << ">>Vampire defends!    )))" << endl;
-    cout << "Strength points " << strength << endl << endl;
+    cout << strength << "- Strength points " << endl << endl;
     int defendValue = 0;
 
     // special defense **CHARM**
