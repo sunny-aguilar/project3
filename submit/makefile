@@ -48,31 +48,37 @@ CPPs += menu.cpp
 
 
 # Targets needed to bring the executable up to date
-Zoo: $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -o Zoo $(OBJECTS)
+Fight: $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o Fight $(OBJECTS)
 
 main.o: main.cpp $(HPPs)
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
-zoo.o: zoo.cpp
+game.o: zoo.hpp
+
+character.o: character.hpp
+
+dice.o: dice.hpp
+
+vampire.o: vampire.hpp
+
+barbarian.o: barbarian.hpp
+
+bluemen.o: bluemen.hpp
+
+medusa.o: medusa.hpp
+
+harrypotter.o: harrypotter.hpp
 
 menu.o: menu.hpp
-
-animal.o: animal.hpp
-
-tiger.o: tiger.hpp
-
-penguin.o: penguin.hpp
-
-Turtle.o: turtle.hpp
 
 
 # Clean-up operations
 clean:
-	rm Zoo *.o
+	rm Fight *.o
 
 debug:
-	valgrind -v --leak-check=full --show-leak-kinds=all --track-origins=yes ./Zoo
+	valgrind -v --leak-check=full --show-leak-kinds=all --track-origins=yes ./Fight
 
 zip:
-	zip -D Project2_Aguilar_Sandro.zip $(CPPs) $(HPPs) $(TXTS) makefile *.txt *.pdf
+	zip -D Project3_Aguilar_Sandro.zip $(CPPs) $(HPPs) $(TXTS) makefile *.txt *.pdf
