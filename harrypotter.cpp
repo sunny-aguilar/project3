@@ -132,6 +132,11 @@ void HarryPotter::defend() {
     else {
         // update player strength
         damageReceived = damage;
+
+        // if Hogwarts ability already used, prompt user
+        if (hogwartsUsed) {
+            cout << "Harry Potter cannot used Hogwarts again!\n";
+        }
     }
 
 
