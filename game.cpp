@@ -129,10 +129,10 @@ void Game::selectPlayer() {
                 {
                     fighterType[player] = HARRYPOTTER;
                     if (player == 0) {
-                        playerOne = new Medusa;
+                        playerOne = new HarryPotter;
                     }
                     else if (player == 1) {
-                        playerTwo = new Medusa;
+                        playerTwo = new HarryPotter;
                     }
                 }
                 break;
