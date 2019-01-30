@@ -202,6 +202,7 @@ bool Game::playAgain() {
     switch (menu.validateNumber(1,2)) {
         case 1:
             selection = true;
+            rounds = 0;
             break;
         case 2:
             selection = false;
