@@ -175,6 +175,3 @@ void BlueMen::checkStrength() {
 bool BlueMen::playerStatus() {
     return playerDead;
 }
-
-
-

@@ -87,13 +87,18 @@ void Medusa::attackPlayer(Character *defender) {
 }
 
 /*********************************************************************
-** Description:     sets the attack damage received
+** Description:     sets the attack damage received. If Medusa rolls
+ *                  a 12, then she uses her *Glare* special ability
 *********************************************************************/
 void Medusa::setAttackVal(int val) {
     // special attack **Glare**
     specialAbility();
-
-    attack = val;
+    if (useSpecial) {
+        attack = 1000;
+    }
+    else {
+        attack = val;
+    }
 }
 
 /*********************************************************************
@@ -133,5 +138,25 @@ void Medusa::defend() {
     damageReceived = damage;
 }
 
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Medusa::strengthUpdate() {
+    strength -= damageReceived;
+}
 
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Medusa::checkStrength() {
+    if (strength < 1) {
+        playerDead = true;
+    }
+}
 
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+bool Medusa::playerStatus() {
+    return playerDead;
+}
