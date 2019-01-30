@@ -27,7 +27,7 @@ using std::setw;
 class Medusa : public Character {
 public:
     Medusa();
-    ~Medusa();
+    ~Medusa() override;
     string getName() override;
     void initializeDice() override;
     int rollDice(std::string action) override;

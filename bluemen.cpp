@@ -40,7 +40,7 @@ string BlueMen::getName() {
 
 /*********************************************************************
 ** Description:     initializes dice based on character dice
-**                  requirements
+**                  requirements. Attack dice 2d10, defense 3d6.
 *********************************************************************/
 void BlueMen::initializeDice() {
     attackDice[0] = new Dice[2];

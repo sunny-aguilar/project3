@@ -39,7 +39,8 @@ string Barbarian::getName() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     initializes dice based on character dice
+**                  requirements. Attack dice 2d6, defense 2d6.
 *********************************************************************/
 void Barbarian::initializeDice() {
     attackDice[0] = new Dice[2];

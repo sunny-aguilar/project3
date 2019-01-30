@@ -39,7 +39,8 @@ string Vampire::getName() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     initializes dice based on character dice
+**                  requirements. Attack dice 1d12, defense 1d6.
 *********************************************************************/
 void Vampire::initializeDice() {
     attackDice[0] = new Dice[1];
