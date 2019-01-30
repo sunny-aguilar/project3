@@ -54,6 +54,9 @@ void Vampire::initializeDice() {
     }
 }
 
+/*********************************************************************
+** Description:     d
+*********************************************************************/
 int Vampire::rollDice(std::string action) {
     int totalRolled = 0;
     if (action == "attack") {
