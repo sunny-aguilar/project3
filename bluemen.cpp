@@ -118,7 +118,6 @@ void BlueMen::defend() {
     // blue men loses 1 dice for every 4 points of damage
     specialAbility();
 
-
     // roll dice
     defendValue = rollDice("defend");
 

@@ -103,10 +103,8 @@ void HarryPotter::defend() {
     cout << "Strength points " << strength << endl << endl;
     int defendValue = 0;
 
-    // special defense **Mob**
-    // blue men loses 1 dice for every 4 points of damage
+    // special defense **Hogwarts**
     specialAbility();
-
 
     // roll dice
     defendValue = rollDice("defend");
@@ -126,7 +124,13 @@ void HarryPotter::defend() {
     damageReceived = damage;
 }
 
+/*********************************************************************
+** Description:     special ability
+*********************************************************************/
+void HarryPotter::specialAbility() {
+    useSpecial = true;
 
+}
 
 
 
