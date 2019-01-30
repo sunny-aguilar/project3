@@ -80,7 +80,7 @@ void Barbarian::attackPlayer(Character *defender) {
 
     // roll dice
     attack = rollDice("attack");
-    cout << "Deals " << attack << " attack points" << endl << endl;
+    cout << "Deals " << attack << " attack points (2d6)" << endl << endl;
 
     // send attack value to defender object
     defender->setAttackVal(attack);

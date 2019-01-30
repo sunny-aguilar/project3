@@ -93,7 +93,7 @@ void BlueMen::attackPlayer(Character *defender) {
 
     // roll dice
     attack = rollDice("attack");
-    cout << "Gets ready to deal " << attack << " attack points (1d12)" << endl << endl;
+    cout << "Gets ready to deal " << attack << " attack points (2d10)" << endl << endl;
 
     // send attack value to defender object
     defender->setAttackVal(attack);
