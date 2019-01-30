@@ -102,16 +102,61 @@ void BlueMen::setAttackVal(int val) {
 void BlueMen::defend() {
     cout << ">>Blue Men defends!    )))" << endl;
     cout << "Strength points " << strength << endl << endl;
+    int defendValue = 0;
+
+    // special defense **Mob**
+    // blue men loses 1 dice for every 4 points of damage
+    specialAbility();
 
 
-    
+    // roll dice
+    defendValue = rollDice("defend");
+
+    // calculate net damage received
+    int damage = attack - defendValue - armor;
+    if (damage < 0) { damage = 0; }
+    cout << "Defense blocked " << defendValue << " attack points\n";
+
+    cout << setw(2) << attack << " - attack points\n";
+    cout << setw(2) << defendValue << " - defense block (1d6)\n";
+    cout << setw(2) << armor << " - armor block\n";
+    cout << setw(2) << damage << " - damage inflicted\n";
+    cout << setw(2) << strength - damage << " - ending strength points\n\n";
+
+    // update player strength
+    damageReceived = damage;
+
 }
 
+/*********************************************************************
+** Description:     special ability
+*********************************************************************/
+void BlueMen::specialAbility() {
+    useSpecial = true;
+}
 
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void BlueMen::strengthUpdate() {
+    strength -= damageReceived;
+}
 
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void BlueMen::checkStrength() {
+    if (strength < 1) {
+        playerDead = true;
+    }
+}
 
-
-
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+bool BlueMen::playerStatus() {
+    return playerDead;
+}
 
 
 

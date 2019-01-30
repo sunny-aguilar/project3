@@ -129,10 +129,6 @@ void Vampire::defend() {
         // update player strength
         damageReceived = damage;
     }
-
-
-
-
 }
 
 /*********************************************************************
