@@ -40,17 +40,17 @@ string HarryPotter::getName() {
 
 /*********************************************************************
 ** Description:     initializes dice based on character dice
-**                  requirements. Attack dice 2d10, defense 3d6.
+**                  requirements. Attack dice 2d6, defense 2d6.
 *********************************************************************/
 void HarryPotter::initializeDice() {
     attackDice[0] = new Dice[2];
     defenseDice[0] = new Dice[2];
 
-    //initialize attack dice
+    //initialize attack dice - 2d6
     for (int index = 0; index < 2; index++) {
         attackDice[0][index] = Dice(6);
     }
-    // initialize defense dice
+    // initialize defense dice - 2d6
     for (int index = 0; index < 2; index++) {
         defenseDice[0][index] = Dice(6);
     }
@@ -100,7 +100,7 @@ void HarryPotter::setAttackVal(int val) {
 *********************************************************************/
 void HarryPotter::defend() {
     cout << ">>Harry Potter defends!    )))" << endl;
-    cout << "Strength points " << strength << endl << endl;
+    cout << strength << "- Strength points " << endl << endl;
     int defendValue = 0;
 
 

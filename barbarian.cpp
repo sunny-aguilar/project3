@@ -98,7 +98,7 @@ void Barbarian::setAttackVal(int val) {
 *********************************************************************/
 void Barbarian::defend() {
     cout << ">>Barbarian defends!    )))" << endl;
-    cout << "Strength points " << strength << endl << endl;
+    cout << strength << "- Strength points " << endl << endl;
     int defendValue = 0;
 
     // roll dice
