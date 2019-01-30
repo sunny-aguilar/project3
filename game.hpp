@@ -21,6 +21,7 @@
 #include "vampire.hpp"
 #include "barbarian.hpp"
 #include "bluemen.hpp"
+#include "medusa.hpp"
 #include <ctime>
 
 enum Fighter {UNSET, VAMPIRE, BARBARIAN, BLUEMEN, MEDUSA, HARRYPOTTER};

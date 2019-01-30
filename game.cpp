@@ -117,6 +117,12 @@ void Game::selectPlayer() {
             case 4:
                 {
                     fighterType[player] = MEDUSA;
+                    if (player == 0) {
+                        playerOne = new Medusa;
+                    }
+                    else if (player == 1) {
+                        playerTwo = new Medusa;
+                    }
                 }
                 break;
             case 5:
