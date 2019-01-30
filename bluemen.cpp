@@ -111,7 +111,7 @@ void BlueMen::setAttackVal(int val) {
 *********************************************************************/
 void BlueMen::defend() {
     cout << ">>Blue Men defends!    )))" << endl;
-    cout << strength << "- Strength points " << endl << endl;
+    cout << setw(2) << strength << "- Strength points " << endl << endl;
     int defendValue = 0;
 
     // special defense **Mob**

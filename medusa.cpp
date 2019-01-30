@@ -116,7 +116,7 @@ void Medusa::specialAbility() {
 *********************************************************************/
 void Medusa::defend() {
     cout << ">>Medusa defends!    )))" << endl;
-    cout << strength << "- Strength points " << endl << endl;
+    cout << setw(2) << strength << "- Strength points " << endl << endl;
     int defendValue = 0;
 
     // roll dice
