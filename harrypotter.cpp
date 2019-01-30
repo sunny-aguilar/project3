@@ -122,8 +122,8 @@ void HarryPotter::defend() {
     // special defense **Hogwarts**
     if ((strength - damage < 1)) {
         specialAbility();
-        cout << "Harry Potter's strength points have dropped below 1!\n";
-        cout << "Harry Potter has used Hogwarts and now has a total of 20 strength points\n";    }
+        cout << "Harry Potter's strength points have dropped below 1 and has died!\n";
+        cout << "Harry Potter has used Hogwarts and is alive again with strength 20!\n";    }
     else {
         // update player strength
         damageReceived = damage;
