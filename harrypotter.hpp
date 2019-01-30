@@ -29,7 +29,7 @@ public:
     void specialAbility() override;
 
 private:
-
+    bool hogwartsUsed;
 };
 
 #endif //PROJECT3_HARRYPOTTER_HPP

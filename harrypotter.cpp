@@ -21,7 +21,8 @@
 **                  name / attack / defense / armor / strength
 *********************************************************************/
 HarryPotter::HarryPotter() :
-        Character{"Harry Potter",0,0,0,10} {
+    Character{"Harry Potter",0,0,0,10},
+    hogwartsUsed{false} {
     attackDice = new Dice*[2];
     defenseDice = new Dice*[3];
 }
@@ -29,7 +30,7 @@ HarryPotter::HarryPotter() :
 /*********************************************************************
 ** Description:     virtual destructor
 *********************************************************************/
-HarryPotter::~HarryPotter() {}
+HarryPotter::~HarryPotter() { hogwartsUsed = false; }
 
 /*********************************************************************
 ** Description:     d
@@ -120,8 +121,6 @@ void HarryPotter::defend() {
     cout << setw(2) << strength - damage << " - ending strength points\n\n";
 
     // special defense **Hogwarts**
-    static bool hogwartsUsed = false;
-
     if ((strength - damage < 1) && !hogwartsUsed) {
         specialAbility();
         cout << "Harry Potter's strength points have dropped below 1 and has died!\n";
