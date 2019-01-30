@@ -109,7 +109,7 @@ void Barbarian::defend() {
     if (damage < 0) { damage = 0; }
 
     // display damage received report
-    cout << "Defense blocked " << defendValue << " attack points\n";
+    cout << "Defense blocked " << defendValue << " attack points (2d6)\n";
 
     cout << setw(2) << attack << " - attack points\n";
     cout << setw(2) << defendValue << " - defense block\n";

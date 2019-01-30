@@ -111,7 +111,7 @@ void HarryPotter::defend() {
     // calculate net damage received
     int damage = attack - defendValue - armor;
     if (damage < 0) { damage = 0; }
-    cout << "Defense blocked " << defendValue << " attack points\n";
+    cout << "Defense blocked " << defendValue << " attack points (2d6)\n";
 
     cout << setw(2) << attack << " - attack points\n";
     cout << setw(2) << defendValue << " - defense block (1d6)\n";
