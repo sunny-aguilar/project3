@@ -128,6 +128,12 @@ void Game::selectPlayer() {
             case 5:
                 {
                     fighterType[player] = HARRYPOTTER;
+                    if (player == 0) {
+                        playerOne = new Medusa;
+                    }
+                    else if (player == 1) {
+                        playerTwo = new Medusa;
+                    }
                 }
                 break;
             default:
