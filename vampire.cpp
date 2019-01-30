@@ -18,7 +18,7 @@
 /*********************************************************************
 ** Description:     no-args default constructor that sets the member
 **                  variables
-**                  attack / defense / armor / strength
+**                  name / attack / defense / armor / strength
 *********************************************************************/
 Vampire::Vampire() :
     Character{"Vampire",0,0,1,18} {
