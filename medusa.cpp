@@ -86,6 +86,7 @@ void Medusa::attackPlayer(Character *defender) {
     specialAbility();
     if (useSpecial) {
         attack = 1000;
+        useSpecial = false;
     }
 
     // send attack value to defender object
