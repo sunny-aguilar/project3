@@ -90,7 +90,21 @@ void Medusa::attackPlayer(Character *defender) {
 ** Description:     sets the attack damage received
 *********************************************************************/
 void Medusa::setAttackVal(int val) {
+    // special attack **Glare**
+    specialAbility();
+
     attack = val;
+}
+
+/*********************************************************************
+** Description:     special ability
+*********************************************************************/
+void Medusa::specialAbility() {
+    if (attack == 12) {
+        useSpecial = true;
+        cout << "Opponent has caught Medusa's glare "
+                "and turned into stone!\n";
+    }
 }
 
 /*********************************************************************
@@ -100,10 +114,6 @@ void Medusa::defend() {
     cout << ">>Medusa defends!    )))" << endl;
     cout << "Strength points " << strength << endl << endl;
     int defendValue = 0;
-
-    // special defense **Glare**
-    specialAbility();
-
 
     // roll dice
     defendValue = rollDice("defend");
@@ -123,14 +133,5 @@ void Medusa::defend() {
     damageReceived = damage;
 }
 
-/*********************************************************************
-** Description:     special ability
-*********************************************************************/
-void Medusa::specialAbility() {
-    useSpecial = true;
-    if (attack == 12) {
-        cout << "Opponent has caught Medusa's glare "
-                "and turned into stone!\n";
-    }
-}
+
 
