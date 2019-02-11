@@ -1,10 +1,7 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 15, 2019
 ** Description:     PROJECT 3
-**                  d
-**                  d
-**                  d
 **                  d
 **                  d
 **                  d

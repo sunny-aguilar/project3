@@ -1,17 +1,14 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
-** Description:     PROJECT 3
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
+** Date:            Feb 15, 2019
+** Description:     Dice are implemented using a class which allows
+**                  each character to have their own type of dice
+**                  as an object inside of them. This allows characters
+**                  to have their own own quantity of dice for both
+**                  attack and defense activities without any external
+**                  logic dictating how many dice they should use.
+**                  Dice are created by the constructor with N sides
+**                  which is handled in the character class.
 *********************************************************************/
 #include "dice.hpp"
 

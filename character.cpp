@@ -1,17 +1,12 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
-** Description:     PROJECT 3
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
+** Date:            Feb 15, 2019
+** Description:     Character class is an abstract class which is used
+**                  by the various characters to inherit common traits
+**                  as well as to implement their own versions of
+**                  their virtual functions. Each character has their
+**                  own set of dice (Dice class) embedded in them. All
+**                  derived classes inherit publicly from Character.
 *********************************************************************/
 #include "character.hpp"
 

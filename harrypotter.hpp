@@ -1,7 +1,15 @@
-//
-// Created by Sandro on 1/29/2019.
-//
-
+/*********************************************************************
+** Author:          Sandro Aguilar
+** Date:            Feb 15, 2019
+** Description:     PROJECT 3
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+**                  d
+*********************************************************************/
 #ifndef HARRYPOTTER_HPP
 #define HARRYPOTTER_HPP
 
