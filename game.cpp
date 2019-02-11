@@ -199,6 +199,8 @@ void Game::startCombat() {
     // free allocated memory for players created during each fight
     delete playerOne;
     delete playerTwo;
+    playerOne = nullptr;
+    playerTwo = nullptr;
 }
 
 /*********************************************************************
