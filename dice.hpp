@@ -20,8 +20,9 @@ using std::vector;
 
 class Dice {
 public:
-    Dice();                          // default constructor
-    Dice(int num);                   // 1-arg constructor
+    Dice();                         // default constructor
+    Dice(int num);                  // 1-arg constructor
+    ~Dice();                        // destructor
     int randomInt();                // returns a random integer
     void setSides(int sides);       // setter that sets die sides
     int getSides();                 // getter that returns die sides

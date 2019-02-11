@@ -27,6 +27,11 @@ Dice::Dice(int num) : N{num} {}
 /*********************************************************************
 ** Description:     returns a random integer from 1 to N
 *********************************************************************/
+Dice::~Dice() {}
+
+/*********************************************************************
+** Description:     returns a random integer from 1 to N
+*********************************************************************/
 int Dice::randomInt() {
     int randomNum;              // hold random number
     randomNum = rand() % N + 1; // computer random # from 1 to N

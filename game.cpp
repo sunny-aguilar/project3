@@ -19,11 +19,7 @@ Game::Game(): fighterType{UNSET}, rounds{0} {}
 /*********************************************************************
 ** Description:     destructor
 *********************************************************************/
-Game::~Game() {
-    // delete players
-    delete playerOne;
-    delete playerTwo;
-}
+Game::~Game() {}
 
 /*********************************************************************
 ** Description:     this function is called from main to get the game
@@ -189,6 +185,10 @@ void Game::startCombat() {
         cin.ignore();
 
     } while (!playerDead);
+
+    // free allocated memory for players created during each fight
+    delete playerOne;
+    delete playerTwo;
 }
 
 /*********************************************************************

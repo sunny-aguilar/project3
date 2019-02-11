@@ -24,7 +24,21 @@ BlueMen::BlueMen() :
 /*********************************************************************
 ** Description:     virtual destructor
 *********************************************************************/
-BlueMen::~BlueMen() {}
+BlueMen::~BlueMen() {
+    // delete dynamically allocated pointers
+    for (int col = 0; col < 2; col++) {
+        delete [] attackDice[col];
+    }
+    //Free the array of pointers
+    delete [] attackDice;
+
+    // delete dynamically allocated pointers
+    for (int col = 0; col < 3; col++) {
+        delete [] defenseDice[col];
+    }
+    //Free the array of pointers
+    delete [] defenseDice;
+}
 
 /*********************************************************************
 ** Description:     initializes dice based on character dice
