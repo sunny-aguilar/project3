@@ -1,11 +1,11 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 15, 2019
-** Description:     PROJECT 3
-**                  d
-**                  d
-**                  d
-**                  d
+** Description:     BlueMen class is derived from Character class.
+**                  Blue men has a high defense that due to 3d6 dice
+**                  however this special ability is eroded as its
+**                  strength drops. Blue men loses 1 defense dice
+**                  for every 4 points of damage received.
 **                  d
 **                  d
 **                  d
