@@ -30,13 +30,6 @@ HarryPotter::HarryPotter() :
 HarryPotter::~HarryPotter() { hogwartsUsed = false; }
 
 /*********************************************************************
-** Description:     d
-*********************************************************************/
-string HarryPotter::getName() {
-    return name;
-}
-
-/*********************************************************************
 ** Description:     initializes dice based on character dice
 **                  requirements. Attack dice 2d6, defense 2d6.
 *********************************************************************/

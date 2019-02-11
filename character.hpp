@@ -20,16 +20,16 @@ public:
     Character();
     Character(string name, int attack, int defense, int armor, int strength);
     virtual ~Character();
-    virtual string getName() = 0;
+    string getName();
     virtual void initializeDice() = 0;
     virtual int rollDice(std::string action) = 0;
     virtual void attackPlayer(Character *defender) = 0;
-    virtual void setAttackVal(int val);
+    void setAttackVal(int val);
     virtual void defend() = 0;
     int getStrength();
     void strengthUpdate();
     void checkStrength();
-    virtual bool playerStatus();
+    bool playerStatus();
     virtual void specialAbility() = 0;
 
 protected:

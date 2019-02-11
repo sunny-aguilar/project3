@@ -32,13 +32,6 @@ Barbarian::Barbarian() :
 Barbarian::~Barbarian() {}
 
 /*********************************************************************
-** Description:     d
-*********************************************************************/
-string Barbarian::getName() {
-    return name;
-}
-
-/*********************************************************************
 ** Description:     initializes dice based on character dice
 **                  requirements. Attack dice 2d6, defense 2d6.
 *********************************************************************/
@@ -91,7 +84,7 @@ void Barbarian::attackPlayer(Character *defender) {
 *********************************************************************/
 void Barbarian::defend() {
     cout << ">>Barbarian defends!    )))" << endl;
-    cout << setw(2) << strength << "- Strength points " << endl << endl;
+    cout << setw(2) << strength << " - Strength points " << endl << endl;
     int defendValue = 0;
 
     // roll dice

@@ -27,13 +27,6 @@ Medusa::Medusa() :
 Medusa::~Medusa() {}
 
 /*********************************************************************
-** Description:     d
-*********************************************************************/
-string Medusa::getName() {
-    return name;
-}
-
-/*********************************************************************
 ** Description:     initializes dice based on character dice
 **                  requirements. Attack dice 2d6, defense 1d6.
 *********************************************************************/
@@ -94,7 +87,7 @@ void Medusa::attackPlayer(Character *defender) {
 *********************************************************************/
 void Medusa::defend() {
     cout << ">>Medusa defends!    )))" << endl;
-    cout << setw(2) << strength << "- Strength points " << endl << endl;
+    cout << setw(2) << strength << " - Strength points " << endl << endl;
     int defendValue = 0;
 
     // roll dice

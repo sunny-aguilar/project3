@@ -29,13 +29,6 @@ BlueMen::BlueMen() :
 BlueMen::~BlueMen() {}
 
 /*********************************************************************
-** Description:     d
-*********************************************************************/
-string BlueMen::getName() {
-    return name;
-}
-
-/*********************************************************************
 ** Description:     initializes dice based on character dice
 **                  requirements. Attack dice 2d10, defense 3d6.
 *********************************************************************/
@@ -101,7 +94,7 @@ void BlueMen::attackPlayer(Character *defender) {
 *********************************************************************/
 void BlueMen::defend() {
     cout << ">>Blue Men defends!    )))" << endl;
-    cout << setw(2) << strength << "- Strength points " << endl << endl;
+    cout << setw(2) << strength << " - Strength points " << endl << endl;
     int defendValue = 0;
 
     // special defense **Mob**

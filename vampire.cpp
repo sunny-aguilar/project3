@@ -29,13 +29,6 @@ Vampire::Vampire() :
 Vampire::~Vampire() {}
 
 /*********************************************************************
-** Description:     d
-*********************************************************************/
-string Vampire::getName() {
-    return name;
-}
-
-/*********************************************************************
 ** Description:     initializes dice based on character dice
 **                  requirements. Attack dice 1d12, defense 1d6.
 *********************************************************************/

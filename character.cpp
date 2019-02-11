@@ -36,6 +36,13 @@ Character::Character(string name, int attack, int defense, int armor, int streng
 Character::~Character() {}
 
 /*********************************************************************
+** Description:     d
+*********************************************************************/
+string Character::getName() {
+    return name;
+}
+
+/*********************************************************************
 ** Description:     sets the attack damage received
 *********************************************************************/
 void Character::setAttackVal(int val) {

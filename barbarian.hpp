@@ -28,7 +28,6 @@ class Barbarian : public Character {
 public:
     Barbarian();
     ~Barbarian() override;
-    string getName() override;
     void initializeDice() override;
     int rollDice(std::string action) override;
     void attackPlayer(Character *defender) override;
