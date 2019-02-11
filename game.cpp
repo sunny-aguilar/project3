@@ -23,18 +23,13 @@ Game::~Game() {}
 
 /*********************************************************************
 ** Description:     this function is called from main to get the game
-**                  started.
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
+**                  started. This function calls another function that
+**                  presents the main menu options.
 *********************************************************************/
 void Game::playGame() {
     // show main menu
     menu.mainMenu();
     startGame();
-
 }
 
 /*********************************************************************
