@@ -19,7 +19,7 @@ HarryPotter::HarryPotter() :
     Character{"Harry Potter",0,0,0,10},
     hogwartsUsed{false} {
     attackDice = new Dice*[2];
-    defenseDice = new Dice*[3];
+    defenseDice = new Dice*[2];
 }
 
 /*********************************************************************

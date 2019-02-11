@@ -1,17 +1,10 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 15, 2019
-** Description:     PROJECT 3
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
+** Description:     Menu class holds the main menu and user prompts
+**                  for the program. The menu class lives inside of
+**                  the Game class and the menus are called
+**                  as needed from within the Game class.
 *********************************************************************/
 #ifndef MENU_HPP
 #define MENU_HPP
