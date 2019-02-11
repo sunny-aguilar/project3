@@ -24,12 +24,12 @@ public:
     virtual void initializeDice() = 0;
     virtual int rollDice(std::string action) = 0;
     virtual void attackPlayer(Character *defender) = 0;
-    virtual void setAttackVal(int val) = 0;
+    virtual void setAttackVal(int val);
     virtual void defend() = 0;
     int getStrength();
     void strengthUpdate();
-    virtual void checkStrength() = 0;
-    virtual bool playerStatus() = 0;
+    void checkStrength();
+    virtual bool playerStatus();
     virtual void specialAbility() = 0;
 
 protected:

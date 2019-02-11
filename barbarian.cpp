@@ -89,13 +89,6 @@ void Barbarian::attackPlayer(Character *defender) {
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void Barbarian::setAttackVal(int val) {
-    attack = val;
-}
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
 void Barbarian::defend() {
     cout << ">>Barbarian defends!    )))" << endl;
     cout << setw(2) << strength << "- Strength points " << endl << endl;
@@ -119,22 +112,6 @@ void Barbarian::defend() {
 
     // update player strength
     damageReceived = damage;
-}
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
-void Barbarian::checkStrength() {
-    if (strength < 1) {
-        playerDead = true;
-    }
-}
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
-bool Barbarian::playerStatus() {
-    return playerDead;
 }
 
 /*********************************************************************

@@ -97,13 +97,6 @@ void BlueMen::attackPlayer(Character *defender) {
 }
 
 /*********************************************************************
-** Description:     sets the attack damage received
-*********************************************************************/
-void BlueMen::setAttackVal(int val) {
-    attack = val;
-}
-
-/*********************************************************************
 ** Description:     d
 *********************************************************************/
 void BlueMen::defend() {
@@ -147,20 +140,4 @@ void BlueMen::specialAbility() {
     else if (strength < 8) {
         cout << "Blue men defends with 1d6 defense dice\n";
     }
-}
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
-void BlueMen::checkStrength() {
-    if (strength < 1) {
-        playerDead = true;
-    }
-}
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
-bool BlueMen::playerStatus() {
-    return playerDead;
 }

@@ -36,6 +36,13 @@ Character::Character(string name, int attack, int defense, int armor, int streng
 Character::~Character() {}
 
 /*********************************************************************
+** Description:     sets the attack damage received
+*********************************************************************/
+void Character::setAttackVal(int val) {
+    attack = val;
+}
+
+/*********************************************************************
 ** Description:     getter for strength integer
 *********************************************************************/
 int Character::getStrength() { return strength; }
@@ -48,4 +55,20 @@ void Character::strengthUpdate() {
 
     // reset damaged received
     damageReceived = 0;
+}
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Character::checkStrength() {
+    if (strength < 1) {
+        playerDead = true;
+    }
+}
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+bool Character::playerStatus() {
+    return playerDead;
 }

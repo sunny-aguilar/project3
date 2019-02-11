@@ -83,13 +83,6 @@ void Vampire::attackPlayer(Character *defender) {
 }
 
 /*********************************************************************
-** Description:     sets the attack damage received
-*********************************************************************/
-void Vampire::setAttackVal(int val) {
-    attack = val;
-}
-
-/*********************************************************************
 ** Description:     d
 *********************************************************************/
 void Vampire::defend() {
@@ -142,20 +135,3 @@ void Vampire::specialAbility() {
         useSpecial = false;
     }
 }
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
-void Vampire::checkStrength() {
-    if (strength < 1) {
-        playerDead = true;
-    }
-}
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
-bool Vampire::playerStatus() {
-    return playerDead;
-}
-

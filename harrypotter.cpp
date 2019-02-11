@@ -87,13 +87,6 @@ void HarryPotter::attackPlayer(Character *defender) {
 }
 
 /*********************************************************************
-** Description:     sets the attack damage received
-*********************************************************************/
-void HarryPotter::setAttackVal(int val) {
-    attack = val;
-}
-
-/*********************************************************************
 ** Description:     d
 *********************************************************************/
 void HarryPotter::defend() {
@@ -143,20 +136,4 @@ void HarryPotter::defend() {
 *********************************************************************/
 void HarryPotter::specialAbility() {
     useSpecial = true;
-}
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
-void HarryPotter::checkStrength() {
-    if (strength < 1) {
-        playerDead = true;
-    }
-}
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
-bool HarryPotter::playerStatus() {
-    return playerDead;
 }

@@ -32,10 +32,7 @@ public:
     void initializeDice() override;
     int rollDice(std::string action) override;
     void attackPlayer(Character *defender) override;
-    void setAttackVal(int val) override;
     void defend() override;
-    void checkStrength() override;
-    bool playerStatus() override;
     void specialAbility() override;
 
 private:
