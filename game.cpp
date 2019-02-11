@@ -169,7 +169,7 @@ void Game::startCombat() {
         if (!playerDead) {
             playerOne->attackPlayer(playerTwo);
             playerTwo->defend();
-            playerTwo->strengthUpdate();
+            playerTwo->strengthUpdate(); // issue is here
             playerTwo->checkStrength();
             playerDead = checkDeath(playerTwo);
         }

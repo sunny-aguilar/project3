@@ -9,9 +9,6 @@
 **                  d
 **                  d
 **                  d
-**                  d
-**                  d
-**                  d
 *********************************************************************/
 #include "vampire.hpp"
 
@@ -111,8 +108,7 @@ void Vampire::defend() {
         // reset special ability after use
         useSpecial = false;
     }
-    else if (!useSpecial) {
-
+    else  {
         // roll dice
         defendValue = rollDice("defend");
 
@@ -145,13 +141,6 @@ void Vampire::specialAbility() {
     else if (num == 2) {
         useSpecial = false;
     }
-}
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
-void Vampire::strengthUpdate() {
-    strength -= damageReceived;
 }
 
 /*********************************************************************

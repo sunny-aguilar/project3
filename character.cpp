@@ -35,3 +35,17 @@ Character::Character(string name, int attack, int defense, int armor, int streng
 *********************************************************************/
 Character::~Character() {}
 
+/*********************************************************************
+** Description:     getter for strength integer
+*********************************************************************/
+int Character::getStrength() { return strength; }
+
+/*********************************************************************
+** Description:     d
+*********************************************************************/
+void Character::strengthUpdate() {
+    strength -= damageReceived;
+
+    // reset damaged received
+    damageReceived = 0;
+}

@@ -148,13 +148,6 @@ void HarryPotter::specialAbility() {
 /*********************************************************************
 ** Description:     d
 *********************************************************************/
-void HarryPotter::strengthUpdate() {
-    strength -= damageReceived;
-}
-
-/*********************************************************************
-** Description:     d
-*********************************************************************/
 void HarryPotter::checkStrength() {
     if (strength < 1) {
         playerDead = true;

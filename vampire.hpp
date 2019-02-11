@@ -9,9 +9,6 @@
 **                  d
 **                  d
 **                  d
-**                  d
-**                  d
-**                  d
 *********************************************************************/
 #ifndef VAMPIRE_HPP
 #define VAMPIRE_HPP
@@ -34,7 +31,6 @@ public:
     void attackPlayer(Character *defender) override;
     void setAttackVal(int val) override;
     void defend() override;
-    void strengthUpdate() override;
     void checkStrength() override;
     bool playerStatus() override;
     void specialAbility() override;
