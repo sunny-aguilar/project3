@@ -57,16 +57,16 @@ int BlueMen::rollDice(std::string action) {
         totalRolled += attackDice[0][1].randomInt();
     }
     else if (action == "defend") {
-        if (strength == 12) {
+        if (strength > 8) {
             totalRolled += defenseDice[0][0].randomInt();
             totalRolled += defenseDice[0][1].randomInt();
             totalRolled += defenseDice[0][2].randomInt();
         }
-        else if (strength < 12 && strength >= 8) {
+        else if (strength <= 8 && strength > 4) {
             totalRolled += defenseDice[0][0].randomInt();
             totalRolled += defenseDice[0][1].randomInt();
         }
-        else if (strength < 8) {
+        else if (strength <= 4) {
             totalRolled += defenseDice[0][0].randomInt();
         }
     }
