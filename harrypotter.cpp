@@ -101,7 +101,7 @@ void HarryPotter::setAttackVal(int val) {
 *********************************************************************/
 void HarryPotter::defend() {
     cout << ">>Harry Potter defends!    )))" << endl;
-    cout << setw(2) << strength << "- Strength points " << endl << endl;
+    cout << setw(2) << strength << " - Strength points " << endl << endl;
     int defendValue = 0;
 
 
