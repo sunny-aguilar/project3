@@ -11,8 +11,9 @@
 
 /*********************************************************************
 ** Description:     no-args default constructor that sets the member
-**                  variables
+**                  variables as follows:
 **                  name / attack / defense / armor / strength
+**                  Attack Dice: 1d12, Defense Dice: 1d6
 *********************************************************************/
 Vampire::Vampire() :
     Character{"Vampire",0,0,1,18} {
@@ -61,12 +62,13 @@ int Vampire::rollDice(std::string action) {
 **                  is 1d12.
 *********************************************************************/
 void Vampire::attackPlayer(Character *defender) {
-    cout << ">>Vampire attacks!    -|---" << endl;
+    // reset attack power to zero
     attack = 0;
-
-    // roll dice
+    // roll attack dice
     attack = rollDice("attack");
-    cout << "Gets ready to deal " << attack << " attack points (1d12)" << endl << endl;
+    // display attack info
+    cout << ">>Vampire attacks!    -|---" << endl;
+    cout << "Sinks his fangs into his opponent with an attack power of " << attack << " points (1d12)" << endl << endl;
 
     // send attack value to defender object
     defender->setAttackVal(attack);
@@ -77,7 +79,7 @@ void Vampire::attackPlayer(Character *defender) {
 *********************************************************************/
 void Vampire::defend() {
     cout << ">>Vampire defends!    )))" << endl;
-    cout << strength << " - Strength points " << endl << endl;
+    cout << strength << " - Starting strength points " << endl << endl;
     int defendValue = 0;
 
     // special defense **CHARM**
@@ -103,7 +105,7 @@ void Vampire::defend() {
         cout << setw(2) << attack << " - attack points\n";
         cout << setw(2) << defendValue << " - defense block (1d6)\n";
         cout << setw(2) << armor << " - armor block\n";
-        cout << setw(2) << damage << " - damage inflicted\n";
+        cout << setw(2) << damage << " - net damage inflicted\n";
         cout << setw(2) << strength - damage << " - ending strength points\n\n";
 
         // update player strength

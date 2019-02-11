@@ -12,8 +12,9 @@
 
 /*********************************************************************
 ** Description:     no-args default constructor that sets the member
-**                  variables as:
+**                  variables as follows:
 **                  name / attack / defense / armor / strength
+**                  Attack Dice: 2d6, Defense Dice: 1d6
 *********************************************************************/
 Medusa::Medusa() :
     Character{"Medusa",0,0,3,8} {
@@ -64,12 +65,12 @@ int Medusa::rollDice(std::string action) {
 **                  is 2d10.
 *********************************************************************/
 void Medusa::attackPlayer(Character *defender) {
-    cout << ">>Medusa attacks!    -|---" << endl;
+    // reset attack power to zero
     attack = 0;
-
-    // roll dice
+    // roll attack dice
     attack = rollDice("attack");
-    cout << "Gets ready to deal " << attack << " attack points (2d6)" << endl << endl;
+    cout << ">>Medusa attacks!    -|---" << endl;
+    cout << "Places a curse with an attack power of " << attack << " points (2d6)" << endl << endl;
 
     // special attack **Glare**
     specialAbility();
@@ -87,7 +88,7 @@ void Medusa::attackPlayer(Character *defender) {
 *********************************************************************/
 void Medusa::defend() {
     cout << ">>Medusa defends!    )))" << endl;
-    cout << setw(2) << strength << " - Strength points " << endl << endl;
+    cout << setw(2) << strength << " - Starting strength points " << endl << endl;
     int defendValue = 0;
 
     // roll dice
@@ -101,7 +102,7 @@ void Medusa::defend() {
     cout << setw(2) << attack << " - attack points\n";
     cout << setw(2) << defendValue << " - defense block (1d6)\n";
     cout << setw(2) << armor << " - armor block\n";
-    cout << setw(2) << damage << " - damage inflicted\n";
+    cout << setw(2) << damage << " - net damage inflicted\n";
     cout << setw(2) << strength - damage << " - ending strength points\n\n";
 
     // update player strength

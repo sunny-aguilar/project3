@@ -16,6 +16,7 @@
 #ifndef MENU_HPP
 #define MENU_HPP
 
+#include "character.hpp"
 #include <iostream>
 #include <string>
 #include <cstring>

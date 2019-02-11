@@ -12,6 +12,7 @@
 #define CHARACTER_HPP
 
 #include "dice.hpp"
+#include "menu.hpp"
 #include <string>
 using std::string;
 

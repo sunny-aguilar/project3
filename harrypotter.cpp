@@ -11,8 +11,9 @@
 
 /*********************************************************************
 ** Description:     no-args default constructor that sets the member
-**                  variables
+**                  variables as follows:
 **                  name / attack / defense / armor / strength
+**                  Attack Dice: 2d6, Defense Dice: 2d6
 *********************************************************************/
 HarryPotter::HarryPotter() :
     Character{"Harry Potter",0,0,0,10},
@@ -65,12 +66,12 @@ int HarryPotter::rollDice(std::string action) {
 **                  is 2d6.
 *********************************************************************/
 void HarryPotter::attackPlayer(Character *defender) {
-    cout << ">>Harry Potter attacks!    -|---" << endl;
+    // reset attack power to zero
     attack = 0;
-
-    // roll dice
+    // roll attack dice
     attack = rollDice("attack");
-    cout << "Gets ready to deal " << attack << " attack points (2d6)" << endl << endl;
+    cout << ">>Harry Potter attacks!    -|---" << endl;
+    cout << "Conjures a spell with an attack strength of " << attack << " points (2d6)" << endl << endl;
 
     // send attack value to defender object
     defender->setAttackVal(attack);
@@ -81,7 +82,7 @@ void HarryPotter::attackPlayer(Character *defender) {
 *********************************************************************/
 void HarryPotter::defend() {
     cout << ">>Harry Potter defends!    )))" << endl;
-    cout << setw(2) << strength << " - Strength points " << endl << endl;
+    cout << setw(2) << strength << " - Starting strength points " << endl << endl;
     int defendValue = 0;
 
 
@@ -98,7 +99,7 @@ void HarryPotter::defend() {
     cout << setw(2) << defendValue << " - defense block\n";
     cout << setw(2) << armor << " - armor block\n";
     cout << setw(2) << damage << " - damage inflicted\n";
-    cout << setw(2) << strength - damage << " - ending strength points\n\n";
+    cout << setw(2) << strength - damage << " - net ending strength points\n\n";
 
     // special defense **Hogwarts**
     if ((strength - damage < 1) && !hogwartsUsed) {

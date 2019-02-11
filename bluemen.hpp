@@ -6,12 +6,6 @@
 **                  however this special ability is eroded as its
 **                  strength drops. Blue men loses 1 defense dice
 **                  for every 4 points of damage received.
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
 *********************************************************************/
 #ifndef BLUEMEN_HPP
 #define BLUEMEN_HPP
