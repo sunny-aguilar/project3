@@ -3,8 +3,8 @@
 ** Date:            Feb 15, 2019
 ** Description:     Menu class holds the main menu and user prompts
 **                  for the program. The menu class lives inside of
-**                  the LinkedList class and the menus are called
-**                  as needed from within the LinkedList class.
+**                  the Game class and the menus are called
+**                  as needed from within the Game class.
 *********************************************************************/
 #include "menu.hpp"
 
@@ -49,7 +49,8 @@ void Menu::menuDisplayPlayers(int first, int second) {
 }
 
 /*********************************************************************
-** Description:     g
+** Description:     displays banner and combat round number for each
+**                  combat round
 *********************************************************************/
 void Menu::menuRound(int round) {
     cout << "\n COMBAT ROUND " << round << "        ====)-------------\n"
@@ -57,7 +58,7 @@ void Menu::menuRound(int round) {
 }
 
 /*********************************************************************
-** Description:     g
+** Description:     displays the death of the player that dies
 *********************************************************************/
 void Menu::menuDeath(string type) {
     cout << "\n >>" << type << " has died!\n"
@@ -70,10 +71,12 @@ void Menu::menuDeath(string type) {
             "                   |   R  I  P    |\n"
             "                   |              |\n";
     if (type == "Harry Potter") {
-        cout << "                   | " << left << setw(12) << "Harry Potter |\n";
+        cout << "                   | " << left << setw(12)
+             << "Harry Potter |\n";
     }
     else {
-        cout << "                   |   " << left << setw(9) << type << "  |\n";
+        cout << "                   |   " << left << setw(9) << type
+             << "  |\n";
     }
     cout << "                   |              |\n"
             "                 \\\\|              |//\n"
@@ -81,7 +84,7 @@ void Menu::menuDeath(string type) {
 }
 
 /*********************************************************************
-** Description:     g
+** Description:     prompts user if they want to play again
 *********************************************************************/
 void Menu::menuPlayAgain() {
     cout << "1. Play again\n"
@@ -89,7 +92,7 @@ void Menu::menuPlayAgain() {
 }
 
 /*********************************************************************
-** Description:     g
+** Description:     prompts user that they are exiting the game
 *********************************************************************/
 void Menu::menuExitGame() {
     cout << "\n EXITING GAME - THANKS FOR PLAYING!\n"
