@@ -1,14 +1,10 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 15, 2019
-** Description:     PROJECT 3
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
+** Description:     Menu class holds the main menu and user prompts
+**                  for the program. The menu class lives inside of
+**                  the LinkedList class and the menus are called
+**                  as needed from within the LinkedList class.
 *********************************************************************/
 #include "menu.hpp"
 

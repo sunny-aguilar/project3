@@ -23,7 +23,7 @@ HarryPotter::HarryPotter() :
 }
 
 /*********************************************************************
-** Description:     virtual destructor
+** Description:     virtual destructor that de-allocates the dice
 *********************************************************************/
 HarryPotter::~HarryPotter() {
     // delete dynamically allocated pointers
@@ -60,7 +60,9 @@ void HarryPotter::initializeDice() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     accepts a string parameter that chooses which
+**                  dice to use (attack or defend), rolls the dice,
+**                  and returns the total rolled value
 *********************************************************************/
 int HarryPotter::rollDice(std::string action) {
     int totalRolled = 0;
@@ -77,7 +79,9 @@ int HarryPotter::rollDice(std::string action) {
 
 /*********************************************************************
 ** Description:     polymorphic function for attacking. Attack value
-**                  is 2d6.
+**                  is 2d6. Functions calls roll dice function to
+**                  obtain attack value. Attack value is sent to
+**                  the defending player.
 *********************************************************************/
 void HarryPotter::attackPlayer(Character *defender) {
     // reset attack power to zero
@@ -92,14 +96,18 @@ void HarryPotter::attackPlayer(Character *defender) {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function handles the players defense
+**                  operations. The roll dice function is called to
+**                  compute the player's defense and calculates the
+**                  damage received by the player. A report is printed
+**                  to show calculations. Since this character is
+**                  Harry Potter, his special ability Hogwarts can be
+**                  called during its defense.
 *********************************************************************/
 void HarryPotter::defend() {
     cout << ">>Harry Potter defends!    )))" << endl;
     cout << setw(2) << strength << " - Starting strength points " << endl << endl;
     int defendValue = 0;
-
-
 
     // roll dice
     defendValue = rollDice("defend");

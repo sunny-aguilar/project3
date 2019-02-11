@@ -89,10 +89,8 @@ int BlueMen::rollDice(std::string action) {
 /*********************************************************************
 ** Description:     polymorphic function for attacking. Attack value
 **                  is 2d10. Functions calls roll dice function to
-**                  attack. Since this character is Medusa, she is
-**                  capable of using her special offensive abilities
-**                  to use Glare and immediately defeat her opponent.
-**                  Attack value is sent to the defender object.
+**                  obtain attack value. Attack value is sent to
+**                  the defending player.
 *********************************************************************/
 void BlueMen::attackPlayer(Character *defender) {
     // reset attack power to zero
@@ -108,7 +106,13 @@ void BlueMen::attackPlayer(Character *defender) {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function handles the players defense
+**                  operations. The roll dice function is called to
+**                  compute the player's defense and calculates the
+**                  damage received by the player. A report is printed
+**                  to show calculations. Since this character is the
+**                  Blue men, their defensive abilities are updated
+**                  to reduce their defensive dice.
 *********************************************************************/
 void BlueMen::defend() {
     cout << ">>Blue Men defends!    )))" << endl;

@@ -58,7 +58,9 @@ void Vampire::initializeDice() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     accepts a string parameter that chooses which
+**                  dice to use (attack or defend), rolls the dice,
+**                  and returns the total rolled value
 *********************************************************************/
 int Vampire::rollDice(std::string action) {
     int totalRolled = 0;
@@ -73,7 +75,9 @@ int Vampire::rollDice(std::string action) {
 
 /*********************************************************************
 ** Description:     polymorphic function for attacking. Attack value
-**                  is 1d12.
+**                  is 1d12. Functions calls roll dice function to
+**                  obtain attack value. Attack value is sent to
+**                  the defending player.
 *********************************************************************/
 void Vampire::attackPlayer(Character *defender) {
     // reset attack power to zero
@@ -89,7 +93,13 @@ void Vampire::attackPlayer(Character *defender) {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function handles the players defense
+**                  operations. The roll dice function is called to
+**                  compute the player's defense and calculates the
+**                  damage received by the player. A report is printed
+**                  to show calculations. Since this character is the
+**                  Vampire, the vampire calls its special Charm
+**                  ability during its defense.
 *********************************************************************/
 void Vampire::defend() {
     cout << ">>Vampire defends!    )))" << endl;

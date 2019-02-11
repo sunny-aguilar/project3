@@ -1,17 +1,8 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 15, 2019
-** Description:     PROJECT 3
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
+** Description:     Barbarian class is derived from Character class.
+**                  Barbarian has no special abilities to call.
 *********************************************************************/
 #ifndef BARBARIAN_HPP
 #define BARBARIAN_HPP
