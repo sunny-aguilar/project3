@@ -97,7 +97,6 @@ void Barbarian::defend() {
 
     // display damage received report
     cout << "Defense blocked " << defendValue << " attack points (2d6)\n";
-
     cout << setw(2) << attack << " - attack points\n";
     cout << setw(2) << defendValue << " - defense block\n";
     cout << setw(2) << armor << " - armor block\n";
@@ -109,7 +108,7 @@ void Barbarian::defend() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     Barbarian has no special ability
 *********************************************************************/
 void Barbarian::specialAbility() {
     // barbarian has no special ability

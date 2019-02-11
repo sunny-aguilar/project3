@@ -100,8 +100,9 @@ void Vampire::defend() {
         // calculate net damage received
         int damage = attack - defendValue - armor;
         if (damage < 0) { damage = 0; }
-        cout << "Defense blocked " << defendValue << " attack points (1d6)\n";
 
+        // display damage received report
+        cout << "Defense blocked " << defendValue << " attack points (1d6)\n";
         cout << setw(2) << attack << " - attack points\n";
         cout << setw(2) << defendValue << " - defense block (1d6)\n";
         cout << setw(2) << armor << " - armor block\n";
@@ -114,12 +115,15 @@ void Vampire::defend() {
 }
 
 /*********************************************************************
-** Description:     special ability
+** Description:     special ability that allows vampire to charm his
+**                  opponents into not attacking each turn with a
+**                  50% probability.
 *********************************************************************/
 void Vampire::specialAbility() {
-
+    // create dice with two sides
     Dice dice(2);
     int num = dice.randomInt();
+    // randomly pick a side
     if (num == 1) {
         useSpecial = true;
     }

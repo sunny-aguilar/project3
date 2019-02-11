@@ -97,8 +97,9 @@ void Medusa::defend() {
     // calculate net damage received
     int damage = attack - defendValue - armor;
     if (damage < 0) { damage = 0; }
-    cout << "Defense blocked " << defendValue << " attack points (1d6)\n";
 
+    // display damage received report
+    cout << "Defense blocked " << defendValue << " attack points (1d6)\n";
     cout << setw(2) << attack << " - attack points\n";
     cout << setw(2) << defendValue << " - defense block (1d6)\n";
     cout << setw(2) << armor << " - armor block\n";
@@ -110,7 +111,8 @@ void Medusa::defend() {
 }
 
 /*********************************************************************
-** Description:     special ability
+** Description:     special ability allows Medusa to GLare at her
+**                  opponents immediately defeating them
 *********************************************************************/
 void Medusa::specialAbility() {
     if (attack == 12) {

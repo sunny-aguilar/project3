@@ -93,8 +93,9 @@ void HarryPotter::defend() {
     // calculate net damage received
     int damage = attack - defendValue - armor;
     if (damage < 0) { damage = 0; }
-    cout << "Defense blocked " << defendValue << " attack points (2d6)\n";
 
+    // display damage received report
+    cout << "Defense blocked " << defendValue << " attack points (2d6)\n";
     cout << setw(2) << attack << " - attack points\n";
     cout << setw(2) << defendValue << " - defense block\n";
     cout << setw(2) << armor << " - armor block\n";
@@ -118,12 +119,12 @@ void HarryPotter::defend() {
             cout << "Harry Potter cannot used Hogwarts again!\n";
         }
     }
-
-
 }
 
 /*********************************************************************
-** Description:     special ability
+** Description:     special ability allows Harry Potter to come back
+**                  to life once with 20 strength points. Ability can
+**                  only be used once.
 *********************************************************************/
 void HarryPotter::specialAbility() {
     useSpecial = true;

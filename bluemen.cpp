@@ -105,8 +105,9 @@ void BlueMen::defend() {
     // calculate net damage received
     int damage = attack - defendValue - armor;
     if (damage < 0) { damage = 0; }
-    cout << "Defense blocked " << defendValue << " attack points\n";
 
+    // display damage received report
+    cout << "Defense blocked " << defendValue << " attack points\n";
     cout << setw(2) << attack << " - attack points\n";
     cout << setw(2) << defendValue << " - defense block\n";
     cout << setw(2) << armor << " - armor block\n";
@@ -118,7 +119,9 @@ void BlueMen::defend() {
 }
 
 /*********************************************************************
-** Description:     special ability
+** Description:     special ability allows Blue men to have up to 3d6
+**                  dice however they lose a 1d6 dice for every 4
+**                  strength points lost
 *********************************************************************/
 void BlueMen::specialAbility() {
     useSpecial = true;
