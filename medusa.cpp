@@ -60,8 +60,9 @@ void Medusa::initializeDice() {
 }
 
 /*********************************************************************
-** Description:     rolls the player's dice and returns the total
-**                  rolled value.
+** Description:     accepts a string parameter that chooses which
+**                  dice to use (attack or defend), rolls the dice,
+**                  and returns the total rolled value
 *********************************************************************/
 int Medusa::rollDice(std::string action) {
     int totalRolled = 0;
@@ -77,7 +78,11 @@ int Medusa::rollDice(std::string action) {
 
 /*********************************************************************
 ** Description:     polymorphic function for attacking. Attack value
-**                  is 2d10.
+**                  is 2d10. Functions calls roll dice function to
+**                  attack. Since this character is Medusa, she is
+**                  capable of using her special offensive abilities
+**                  to use Glare and immediately defeat her opponent.
+**                  Attack value is sent to the defender object.
 *********************************************************************/
 void Medusa::attackPlayer(Character *defender) {
     // reset attack power to zero
@@ -99,7 +104,11 @@ void Medusa::attackPlayer(Character *defender) {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function handles the players defense
+ *                  operations. The roll dice function is called to
+ *                  compute the player's defense and calculates the
+ *                  damage received by the player. A report is printed
+ *                  to show calculations.
 *********************************************************************/
 void Medusa::defend() {
     cout << ">>Medusa defends!    )))" << endl;
@@ -126,7 +135,7 @@ void Medusa::defend() {
 }
 
 /*********************************************************************
-** Description:     special ability allows Medusa to GLare at her
+** Description:     special ability allows Medusa to Glare at her
 **                  opponents immediately defeating them
 *********************************************************************/
 void Medusa::specialAbility() {

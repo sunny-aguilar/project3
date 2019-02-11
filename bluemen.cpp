@@ -22,7 +22,7 @@ BlueMen::BlueMen() :
 }
 
 /*********************************************************************
-** Description:     virtual destructor
+** Description:     virtual destructor that de-allocates the dice
 *********************************************************************/
 BlueMen::~BlueMen() {
     // delete dynamically allocated pointers
@@ -60,7 +60,8 @@ void BlueMen::initializeDice() {
 
 /*********************************************************************
 ** Description:     blue men start out with 3 defense dice and a dice
- *                  is removed for every 4 points of damage received
+**                  is removed for every 4 points of damage received.
+**                  Function returns the total roll value.
 *********************************************************************/
 int BlueMen::rollDice(std::string action) {
     int totalRolled = 0;
@@ -87,7 +88,11 @@ int BlueMen::rollDice(std::string action) {
 
 /*********************************************************************
 ** Description:     polymorphic function for attacking. Attack value
-**                  is 2d10.
+**                  is 2d10. Functions calls roll dice function to
+**                  attack. Since this character is Medusa, she is
+**                  capable of using her special offensive abilities
+**                  to use Glare and immediately defeat her opponent.
+**                  Attack value is sent to the defender object.
 *********************************************************************/
 void BlueMen::attackPlayer(Character *defender) {
     // reset attack power to zero
@@ -95,7 +100,8 @@ void BlueMen::attackPlayer(Character *defender) {
     // roll attack dice
     attack = rollDice("attack");
     cout << ">>Blue Men attacks!    -|---" << endl;
-    cout << "Swarm their opponent with an attack power of " << attack << " points (2d10)" << endl << endl;
+    cout << "Swarm their opponent with an attack power of " << attack
+         << " points (2d10)" << endl << endl;
 
     // send attack value to defender object
     defender->setAttackVal(attack);
