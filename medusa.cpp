@@ -23,7 +23,7 @@ Medusa::Medusa() :
 }
 
 /*********************************************************************
-** Description:     virtual destructor
+** Description:     virtual destructor that de-allocates the dice
 *********************************************************************/
 Medusa::~Medusa() {
     // delete dynamically allocated pointers
@@ -60,7 +60,8 @@ void Medusa::initializeDice() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     rolls the player's dice and returns the total
+**                  rolled value.
 *********************************************************************/
 int Medusa::rollDice(std::string action) {
     int totalRolled = 0;

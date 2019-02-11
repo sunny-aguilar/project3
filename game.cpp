@@ -75,7 +75,11 @@ void Game::gameFlow() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this functions is called to allow a player to
+**                  select their character. Each character is
+**                  dynamically allocated depending on which one
+**                  is chosen. Player one and player two are assigned
+**                  to class data variables.
 *********************************************************************/
 void Game::selectPlayer() {
 // initialize fighters chosen to fight
@@ -152,7 +156,12 @@ void Game::selectPlayer() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function performs the combat operations
+**                  between the two players. A while loop is employed
+**                  to continue combat until a player has died. Each
+**                  player has a turn in attacking and defending.
+**                  After the game has ended, the dynamically created
+**                  players are deleted.
 *********************************************************************/
 void Game::startCombat() {
     bool playerDead = false;
@@ -193,7 +202,8 @@ void Game::startCombat() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function checks to see if a player has died
+**                  and returns true if yes and false if not
 *********************************************************************/
 bool Game::checkDeath(Character *defender) {
     bool playerDied = false;
@@ -205,7 +215,9 @@ bool Game::checkDeath(Character *defender) {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function controls if a player would like to
+**                  play again after combat is over. Returns a true
+**                  or false bool value.
 *********************************************************************/
 bool Game::playAgain() {
     bool selection = false;
@@ -225,7 +237,8 @@ bool Game::playAgain() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this functions prompts user that they have quit
+**                  the game
 *********************************************************************/
 void Game::exitGame() {
     menu.menuExitGame();

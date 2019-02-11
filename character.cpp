@@ -36,7 +36,7 @@ Character::Character(string name, int attack, int defense, int armor, int streng
 Character::~Character() {}
 
 /*********************************************************************
-** Description:     d
+** Description:     getter that returns the character name
 *********************************************************************/
 string Character::getName() {
     return name;
@@ -55,7 +55,9 @@ void Character::setAttackVal(int val) {
 int Character::getStrength() { return strength; }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function updates the damage inflicted on a
+**                  player during combat and resets "damageReceived"
+**                  back to zero after
 *********************************************************************/
 void Character::strengthUpdate() {
     strength -= damageReceived;
@@ -65,7 +67,9 @@ void Character::strengthUpdate() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function checks to see if a player's strength
+**                  points are below 1 and if they are, sets
+**                  the bool variable as true
 *********************************************************************/
 void Character::checkStrength() {
     if (strength < 1) {
@@ -74,7 +78,8 @@ void Character::checkStrength() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     getter that returns the bool value indicating if
+**                  a player is dead
 *********************************************************************/
 bool Character::playerStatus() {
     return playerDead;
