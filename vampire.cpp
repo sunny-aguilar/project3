@@ -1,14 +1,11 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 15, 2019
-** Description:     PROJECT 3
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
+** Description:     Vampire class is derived from Character class.
+**                  Vampire has the special ability of charming
+**                  opponents into not attacking 50% of the time.
+**                  Charm trumps Medusa's Glare. Vampire has 1d12
+**                  attack dice and 1d6 defense dice.
 *********************************************************************/
 #include "vampire.hpp"
 
