@@ -11,12 +11,6 @@
 #define HARRYPOTTER_HPP
 
 #include "character.hpp"
-#include <iostream>
-#include <iomanip>
-using std::cin;
-using std::cout;
-using std::endl;
-using std::setw;
 
 class HarryPotter : public Character {
 public:

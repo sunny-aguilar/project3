@@ -8,12 +8,6 @@
 #define BARBARIAN_HPP
 
 #include "character.hpp"
-#include <iostream>
-#include <iomanip>
-using std::cin;
-using std::cout;
-using std::endl;
-using std::setw;
 
 class Barbarian : public Character {
 public:

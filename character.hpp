@@ -13,8 +13,14 @@
 
 #include "dice.hpp"
 #include "menu.hpp"
+#include <iostream>
 #include <string>
+#include <iomanip>
 using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::setw;
 
 class Character {
 public:
