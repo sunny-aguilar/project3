@@ -24,7 +24,8 @@ Game::~Game() {}
 /*********************************************************************
 ** Description:     this function is called from main to get the game
 **                  started. This function calls another function that
-**                  presents the main menu options.
+**                  presents the main menu options. A user can start
+**                  the game here or quit.
 *********************************************************************/
 void Game::playGame() {
     // show main menu
@@ -33,7 +34,9 @@ void Game::playGame() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function assists with the game initialization
+**                  process and routes the program flow to the next
+**                  processes: character selection or quit game.
 *********************************************************************/
 void Game::startGame() {
     int sel = menu.validateNumber(1,2);
@@ -52,7 +55,10 @@ void Game::startGame() {
 }
 
 /*********************************************************************
-** Description:     d
+** Description:     this function controls the flow of the game. The
+**                  functions calls other functions to initialize
+**                  the players, initialize the dice, and start
+**                  combat operations.
 *********************************************************************/
 void Game::gameFlow() {
     do {
