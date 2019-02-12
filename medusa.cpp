@@ -27,15 +27,15 @@ Medusa::Medusa() :
 *********************************************************************/
 Medusa::~Medusa() {
     // delete dynamically allocated pointers
-    for (int col = 0; col < 1; col++) {
-        delete [] attackDice[col];
+    for (int row = 0; row < 1; row++) {
+        delete [] attackDice[row];
     }
     //Free the array of pointers
     delete [] attackDice;
 
     // delete dynamically allocated pointers
-    for (int col = 0; col < 1; col++) {
-        delete [] defenseDice[col];
+    for (int row = 0; row < 1; row++) {
+        delete [] defenseDice[row];
     }
     //Free the array of pointers
     delete [] defenseDice;
