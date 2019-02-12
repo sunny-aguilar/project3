@@ -26,14 +26,14 @@ BlueMen::BlueMen() :
 *********************************************************************/
 BlueMen::~BlueMen() {
     // delete dynamically allocated pointers
-    for (int col = 0; col < 2; col++) {
+    for (int col = 0; col < 1; col++) {
         delete [] attackDice[col];
     }
     //Free the array of pointers
     delete [] attackDice;
 
     // delete dynamically allocated pointers
-    for (int col = 0; col < 3; col++) {
+    for (int col = 0; col < 1; col++) {
         delete [] defenseDice[col];
     }
     //Free the array of pointers

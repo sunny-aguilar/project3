@@ -49,7 +49,7 @@ void Vampire::initializeDice() {
     defenseDice[0] = new Dice[1];
 
     for (int index = 0; index < 1; index++) {
-        attackDice[0][0] = Dice(12);
+        attackDice[0][index] = Dice(12);
     }
 
     for (int index = 0; index < 1; index++) {
