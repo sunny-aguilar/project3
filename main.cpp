@@ -12,7 +12,6 @@
 **                  class.
 *********************************************************************/
 #include "game.hpp"
-#include <iostream>
 
 int main() {
     auto seed = static_cast<unsigned int>(time(nullptr));
