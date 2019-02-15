@@ -1,6 +1,6 @@
 # File: 	makefile
 # Author: 	Sandro Aguilar
-# Date: 	February 2019
+# Date: 	February 15 2019
 # Description:	Makefile for Project 3 Fantasy Combat
 
 # Variables to control Makefile operation
