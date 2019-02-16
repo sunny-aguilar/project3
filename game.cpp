@@ -190,9 +190,9 @@ void Game::startCombat() {
             playerDead = checkDeath(playerOne);
         }
 
-        // pause between rounds
-        cout << "\nHit [ENTER] to continue to next round\n";
-        cin.ignore();
+        // DEBUGGING - pause between rounds
+        // cout << "\nHit [ENTER] to continue to next round\n";
+        // cin.ignore();
 
     } while (!playerDead);
 
